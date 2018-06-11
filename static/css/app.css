@@ -1,0 +1,99 @@
+/*通用样式*/
+html {
+	font-size: 10px;
+}
+ul,ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #000;
+}
+
+
+/*首页*/
+.index-header {
+	height: 4rem;
+	width: 100%;
+}
+.index-header a{
+	display: block;
+	width: 50%;
+	float:left;
+	font-size: 1.5rem;
+	font-weight: bold;
+	height: 4rem;
+	line-height: 4rem;
+	position: relative;
+}
+.index-header a:first-child {
+	text-align: right;
+	padding-right: 2rem;
+}
+.index-header a:last-child {
+	padding-left: 2rem;
+}
+.index-header a.active {
+	color: #0BBE06;
+}
+.index-header a:after {
+	position: absolute;
+	content: '';
+	width: 1.4rem;
+	height: .3rem;
+	border-radius: .5rem;
+	background: #0BBE06;
+	bottom: 0;
+}
+.index-header .recommend:after {
+	right:2.5rem;
+}
+.index-header .clickmap:after {
+	left:2.5rem;
+	display: none;
+}
+
+.index-slider {
+	height: 17rem;
+	padding: 0.7rem 0;
+	background:#f1f1f1 ;
+}
+.index-slider {
+	
+}
+
+
+.index-icon {
+	height: 9rem;
+	padding: 1.5rem;
+	/*background: #009CDA;*/
+}
+.index-icon ul li {
+	float: left;
+	padding-right: 2rem;
+	/*padding: 1rem;*/
+}
+.index-icon ul li:last-child {
+	padding-right: 0;
+}
+.index-icon ul li img {
+	width: 4rem;
+	height: 4rem;
+	display: block;
+}
+.index-icon ul li span {
+	margin-top: 1rem;
+	display: block;
+	font-size: 1.1rem;
+	color:#666;
+	text-align: center;
+}
+
+
+.index-slogan {
+	height: 5rem;
+}
+.index-slogan .beautifulcountry{
+	
+}
