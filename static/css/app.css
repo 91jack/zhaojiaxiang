@@ -115,7 +115,7 @@ em {
 
 /*首页图标*/
 .index-icon {
-	height: 9rem;
+	/*height: 9rem;*/
 	padding: 1.5rem;
 	overflow: hidden;
 }
