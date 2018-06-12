@@ -67,20 +67,55 @@ em {
 	display: none;
 }
 
+/*首页轮播*/
 .index-slider {
 	height: 17rem;
 	padding: 0.7rem 0;
 	background:#f1f1f1 ;
 }
-.index-slider {
-	
+
+.swiper-container {
+	width: 100%;
+	/*margin: 35px 0;*/
+}
+.swiper-slide {
+	-webkit-transition: transform 1.0s;
+	-moz-transition: transform 1.0s;
+	-ms-transition: transform 1.0s;
+	-o-transition: transform 1.0s;
+	-webkit-transform: scale(0.7);
+	transform: scale(0.7);
+}
+.swiper-slide-active,.swiper-slide-duplicate-active {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.none-effect {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+}
+/*.swiper-slide{
+	background: #fff;
+	padding:10px;
+	display: block;
+	border-radius: 14px;
+}*/
+.swiper-slide img {
+	width: 100%;
+	border-radius: 14px;
+	display: block;
 }
 
 
+
+
+/*首页图标*/
 .index-icon {
 	height: 9rem;
 	padding: 1.5rem;
-	/*background: #009CDA;*/
+	overflow: hidden;
 }
 .index-icon ul li {
 	float: left;
@@ -107,7 +142,9 @@ em {
 .index-slogan {
 	height: 5rem;
 	padding: 0 1.5rem;
-	/*border: 1px solid red;*/
+	overflow: hidden;
+/*	background: red;*/
+	position: relative;
 }
 .index-slogan h2{
 	float: left;
@@ -129,17 +166,156 @@ em {
 	float:left;
 	margin: 1.5rem 1rem;
 }
+.index-scroll li {
+	height: 5rem;
+	line-height: 5rem;
+}
 .index-scroll img {
-	width: 1rem;
+	/*width: 1rem;*/
 }
 .index-scroll span {
 	font-size: 1.1rem;
 	color:#333;
-	line-height: 2rem;
+	/*line-height: 3rem;*/
 }
 .index-scroll span em {
 	font-style: normal;
 }
+.icon-more {
+	position: absolute;
+	right:1rem;
+	top:1.2rem;
+	
+}
+
+
+
+
+.index-product-list {
+	width: 100%;
+}
+.index-product-list li {
+	display: block;
+	width: 49%;
+	height: 17rem;
+	float:left;
+}
+.index-product-list li:nth-child(2n) {
+	float:right;
+}
+.index-product-list li .product-img {
+	width: 100%;
+	height: 11rem;
+	overflow: hidden;
+}
+.index-product-list li .product-img img{
+	width: 100%;
+	height: 100%;
+}
+.index-product-list li p {
+	margin: 0;
+	padding: 0;
+}
+.index-product-list li .product-name {
+	color:#000;
+	padding-left: 1rem;
+}
+.index-product-list li .product-intro {
+	color:#999;
+	padding-left: 1rem;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+
+
+
+
+
+
+
+
+/*必看景区 scenic.html
+ -------------------------------*/
+.scenic-item-slider {
+	height: 17rem;
+	background: #007AFF;
+}
+
+.scenic-item-info {
+	padding: 1rem 1.5rem;
+}
+.scenic-item-intro {
+	color:#999;
+	
+}
+.scenic-item-status {
+	display: inline-block;
+	width: 4rem;
+	height: 2rem;
+	line-height: 2rem;
+	background: #FFF6EB;
+	color: #FF6A30;
+	font-size: 1.2rem;
+	text-align: center;
+	border-radius: 1rem;
+}
+/*休整状态*/
+.off {
+	color: #999;
+	background: #f4f4f4;
+}
+.scenic-item-name {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color:#333;
+	padding-left: 1rem;
+}
+
+.scenic-item-content {
+	color: #999;
+	padding: .3rem 0;
+}
+.scenic-item-footer {
+	height: 5rem;
+	line-height: 5rem;
+	border-top: 1px solid #f4f4f4;
+	border-bottom: 1px solid #f4f4f4;
+	position: relative;
+}
+.scenic-item-footer a{
+	display: block;
+	width: 50%;
+	float:left;
+	text-align: center;
+	color: #22C41E;
+}
+.scenic-item-footer .line {
+	display: block;
+	width: 1px;
+	height: 3rem;
+	background: #f4f4f4;
+	position: absolute;
+	left: 50%;
+	top: 1rem;
+	z-index: 10;
+}
+.scenic-item-footer a img {
+	display:inline-block;
+	margin-right: .6rem;
+	width: 2rem;
+	height: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /*预约挂号  yuyue.html

@@ -16,36 +16,48 @@
 	</div>
 	
 	<div class="index-slider">
-		
+		<div class="swiper-container">
+		  <div class="swiper-wrapper">
+		    <div class="swiper-slide swiper-slide-center none-effect">
+		    	<img src="static/img/banner1.png"/>
+		    </div>
+		    <div class="swiper-slide">
+		    	<img src="static/img/banner2.png"/>
+		    </div>
+		    <div class="swiper-slide">
+		    	<img src="static/img/pubu.png"/>
+		    </div>
+		  </div>
+		</div>
 	</div>
 	
-	<div class="index-icon">
+	<div class="index-icon am-fr">
 		<ul>
 			<li>
-				<a href="">
+				<a href="scenic.html">
 					<img src="static/images/index_icon1.png"/>
 					<span>必看景区</span>
 				</a>
 			</li><li>
-				<a href="">
+				<a href="minsu.html">
 					<img src="static/images/index_icon2.png"/>
-					<span>赵家名宿</span>
+					<span>赵家民宿</span>
 				</a>
 			</li>
 			<li>
-				<a href="">
+				<a href="yiliao.html">
 					<img src="static/images/index_icon3.png"/>
 					<span>康养医疗</span>
 				</a>
 			</li>
 			<li>
-				<a href="">
+				<a href="nongye.html">
 					<img src="static/images/index_icon4.png"/>
 					<span>农业基地</span>
 				</a>
 			</li>
 			<li>
-				<a href="">
+				<a href="tongzhanguan.html">
 					<img src="static/images/index_icon5.png"/>
 					<span>统战管</span>
 				</a>
@@ -85,24 +97,51 @@
 				
 			</ul>
 		</div>
-		<a class="more" href="">
+		<a class="icon-more" href="climate.html">
 			<img src="static/images/icon_more.png"/>
 		</a>
 	</div>
 	
-	<!--<div class="index-product-list">
+	<div class="index-product-list am-fr">
 		<ul>
 			<li>
 				<a href="">
-					<img src="static/img/product2.png" alt="" />
-					
-					<p>铁棍山药</p>
-					
-					<p>为深根植物，宜选土层深厚...</p>
+					<div class="product-img">
+						<img src="static/img/product1.png" alt="" />
+					</div>
+					<p class="product-name">铁棍山药</p>
+					<p class="product-intro">为深根植物，宜选土层深厚...</p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="product-img">
+						<img src="static/img/product2.png" alt="" />
+					</div>
+					<p class="product-name">铁棍山药</p>
+					<p class="product-intro">为深根植物，宜选土层深厚...</p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="product-img">
+						<img src="static/img/product2.png" alt="" />
+					</div>
+					<p class="product-name">铁棍山药</p>
+					<p class="product-intro">为深根植物，宜选土层深厚...</p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="product-img">
+						<img src="static/img/product1.png" alt="" />
+					</div>
+					<p class="product-name">铁棍山药</p>
+					<p class="product-intro">为深根植物，宜选土层深厚...</p>
 				</a>
 			</li>
 		</ul>
-	</div>-->
+	</div>
 
 
 
@@ -110,6 +149,30 @@
 <script src="static/amazeui/js/amazeui.min.js"></script>
 <script src="static/swiper/swiper.min.js"></script>
 <script src="static/js/app.js"></script>
+<script type="text/javascript">
+	window.onload = function() {
+    var swiper = new Swiper('.swiper-container',{
+		autoplay:1000,
+		speed:1000,
+		autoplayDisableOnInteraction : false,
+		loop:true,
+		centeredSlides : true,
+		slidesPerView:2,
+//      pagination : '.swiper-pagination',
+//		paginationClickable:true,
+//		prevButton:'.swiper-button-prev',
+//      nextButton:'.swiper-button-next',
+		onInit:function(swiper){
+			swiper.slides[2].className="swiper-slide swiper-slide-active";//第一次打开不要动画
+			},
+        breakpoints: { 
+                668: {
+                    slidesPerView: 1,
+                 }
+            }
+		});
+		}
 
+</script>
 </body>
 </html>
