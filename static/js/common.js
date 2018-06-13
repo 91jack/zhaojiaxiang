@@ -10,3 +10,10 @@
 		document.documentElement.style.fontSize = deviceWidth / 31.25 + 'px';
 	};
 })();
+
+// 顶部手动轮播图1
+$('top-slider-imgbox li').each(function(){
+	$(this).touchesStart(function(){
+		console.log(111)
+	})
+});
