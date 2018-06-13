@@ -5,16 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
   <title>我为你代言</title>
-  <link rel="stylesheet" href="static/amazeui/css/amazeui.min.css">
-  <link rel="stylesheet" href="static/css/app.css">
+  <link rel="stylesheet" href="static/css/common.css">
+  <link rel="stylesheet" type="text/css" href="static/css/daiyan.css"/>
 </head>
-<body class="">
+<body>
+	<!--代言 顶部-->
 	<div class="daiyan-header">
-		<!--<div class="top-bg">
-			<img src="static/images/"/>
-		</div>-->
+		<div class="daiyan-header-top"></div>
+		<div class="daiyan-avatar">
+			<img src="static/images/avatar.png" alt="" />
+		</div>
+		<div class="daiyan-user">
+			<img src="static/images/icon_dang.png" alt="" />
+			<span>MOON</span>
+		</div>
+		<div class="daiyan-slogan">
+			<img src="static/images/slogan.png"/>
+		</div>
 	</div>
 	
+	<!--代言 项目-->
 	<div class="daiyan-item">
 		<ul class="daiyan-item-tab">
 			<li class="active">必看景区</li>
@@ -23,31 +33,98 @@
 			<li>统战馆</li>
 		</ul>
 		<div class="daiyan-item-content">
+			<div class="daiyan-item-cell show">
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝1111</p>
+				</a>
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝11112</p>
+				</a>
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝11113</p>
+				</a>
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝11114</p>
+				</a>
+			</div>
+			
 			<div class="daiyan-item-cell">
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝222221</p>
+				</a>
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝222222</p>
+				</a>
 				<a href="">
 					<img src="static/img/jingdian.png" alt="" />
 					<p>赵家乡水坝</p>
 				</a>
 				<a href="">
-					<img src="static/img/pubu.png" alt="" />
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝</p>
+				</a>
+			</div>
+			
+			<div class="daiyan-item-cell">
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝3333331</p>
+				</a>
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝3333332</p>
+				</a>
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
 					<p>赵家乡水坝</p>
 				</a>
 				<a href="">
-					<img src="static/img/pubu.png" alt="" />
+					<img src="static/img/jingdian.png" alt="" />
 					<p>赵家乡水坝</p>
 				</a>
+			</div>
+			
+			<div class="daiyan-item-cell">
 				<a href="">
-					<img src="static/img/pubu.png" alt="" />
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝444444</p>
+				</a>
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝4444444</p>
+				</a>
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
+					<p>赵家乡水坝4444444</p>
+				</a>
+				<a href="">
+					<img src="static/img/jingdian.png" alt="" />
 					<p>赵家乡水坝</p>
 				</a>
 			</div>
 		</div>
 	</div>
-	
-	
-<script src="static/js/jquery-3.1.1.min.js"></script>
-<script src="static/amazeui/js/amazeui.min.js"></script>
-<script src="static/js/app.js"></script>
-
 </body>
+
+<script src="static/js/jquery-3.1.1.min.js"></script>
+<script src="static/js/common.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	// tab切换
+	$('.daiyan-item-tab li').each(function(){
+		$(this).on('click', function(){
+			var index = $(this).index();
+			console.log(index)
+			$(this).addClass('active').siblings().removeClass('active');
+			
+			$('.daiyan-item-cell').eq(index).addClass('show').siblings().removeClass('show');
+		});
+	
+	});
+</script>
 </html>

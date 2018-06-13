@@ -22,3 +22,17 @@ input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; 
 .mt2 {
 	margin-top: 2rem;
 }
+.fl {
+	float:left;
+}
+.fr {
+	float: right;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}

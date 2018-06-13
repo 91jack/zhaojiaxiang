@@ -4,45 +4,40 @@ html {
 }
 .index-header {
 	width: 100%;
-	height: 3.34rem;
-	/*background: red;*/
+	height: 3.333333rem;
 }
-.index-header a{
+.index-header p{
 	display: block;
-	width: 50%;
+	width: 10rem;
+	height: 3.333333rem;
+	margin: 0 auto;
+}
+.index-header p a{
+	display: inline-block;
+	width:4.833333rem;
 	float:left;
-	font-size: 1.34rem;
+	font-size: 1.333333rem;
 	text-align: center;
 	font-weight: bold;
-	height: 3.34rem;
-	line-height: 3.34rem;
+	height: 3.333333rem;
+	line-height: 3.333333rem;
 	position: relative;
-}
-.index-header a:first-child {
-	/*background: gray;*/
-	text-indent: 8rem;
-	
-}
-.index-header a:last-child {
-	text-indent: -8rem;
 }
 .index-header a.active {
 	color: #0BBE06;
 }
-.index-header a:after {
+.index-header p a:after {
 	position: absolute;
 	content: '';
-	width: 1.4rem;
-	height: .3rem;
+	width: 1.166666rem;
+	height: 0.25rem;
 	border-radius: .5rem;
 	background: #0BBE06;
+	left: 50%;
+	margin-left: -0.7rem;
 	bottom: 0;
 }
-.index-header .recommend:after {
-	right:2.5rem;
-}
 .index-header .clickmap:after {
-	left:2.5rem;
 	display: none;
 }
 
@@ -54,5 +49,130 @@ html {
 	overflow: hidden;
 }
 .index-slider img {
-	display: none;
+	/*display: none;*/
+	width: 100%;
+	height: 100%;
+}
+
+
+/*首页图标导航*/
+.index-icon {
+	width: 100%;
+	height: 7.5rem
+	padding: 1rem;
+}
+.index-icon ul li {
+	display: block;
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+.index-icon ul li:last-child {
+	padding-right: 0;
+}
+.index-icon ul li img {
+	width: 3.666666rem;
+	height: 3.666666rem;
+	display: block;
+	margin: .5rem auto;
+}
+.index-icon ul li span {
+	display: block;
+	font-size: 1.1rem;
+	color:#666;
+	text-align: center;
+}
+
+/*首页 slogan*/
+.index-slogan {
+	height: 4.166666rem;
+	padding: 0 1rem;
+	overflow: hidden;
+	background: red;
+	position: relative;
+}
+.index-slogan h2{
+	float: left;
+	width: 6.583333rem;
+	height: 2.25rem;
+	background:#FFF6EB;
+	border-radius: 1.125rem;
+	margin: 0.958333rem 0;
+	font-size: 0;
+}
+.index-slogan h2 img {
+	width: 4.5rem;
+	margin-top: 0.583333rem;
+	margin-left: 1.041666rem;
+	vertical-align: middle;
+}
+.index-slogan .line {
+	display: block;
+	width: 0.083333rem;
+	height: 1.666666rem;
+	float:left;
+	background: #DEDEDE;
+	margin: 1.25rem 1rem;
+}
+.index-scroll {
+	height: 1.666666rem;
+}
+.index-scroll li {
+	height: 5rem;
+	line-height: 5rem;
+}
+.index-scroll img {
+	/*width: 1rem;*/
+}
+.index-scroll span {
+	font-size: 1.1rem;
+	color:#333;
+	/*line-height: 3rem;*/
+}
+.index-scroll span em {
+	font-style: normal;
+}
+.icon-more {
+	position: absolute;
+	right:1rem;
+	top:1.2rem;
+	
+}
+
+/*首页 农产品*/
+.index-product-list {
+	width: 100%;
+}
+.index-product-list li {
+	display: block;
+	width: 49%;
+	height: 17rem;
+	float:left;
+}
+.index-product-list li:nth-child(2n) {
+	float:right;
+}
+.index-product-list li .product-img {
+	width: 100%;
+	height: 11rem;
+	overflow: hidden;
+}
+.index-product-list li .product-img img{
+	width: 100%;
+	height: 100%;
+}
+.index-product-list li p {
+	margin: 0;
+	padding: 0;
+}
+.index-product-list li .product-name {
+	color:#000;
+	padding-left: 1rem;
+}
+.index-product-list li .product-intro {
+	color:#999;
+	padding-left: 1rem;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
 }
