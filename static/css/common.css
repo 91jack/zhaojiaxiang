@@ -38,8 +38,6 @@ input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; 
 }
 .container {
 	padding: 1rem;
-	font-size: 1.2em;
-	line-height: 1.5rem;
 }
 
 /*表单*/
@@ -158,5 +156,10 @@ input[type="text"] {
 	font-size: 1.25rem;
 	font-weight: bold;
 	border-bottom: 1px solid #e6e6e6;
+	color: #000;
 }
-
+.tzgwrap {
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	color: #666;
+}
