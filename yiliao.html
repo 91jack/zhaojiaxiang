@@ -5,22 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
   <title>康养医疗</title>
-  <link rel="stylesheet" href="static/amazeui/css/amazeui.min.css">
+  <link rel="stylesheet" href="static/css/common.css">
   <link rel="stylesheet" href="static/css/app.css">
 </head>
 <body class="yiliao-page">
-	<div class="slider">
-		<img src="static/img/banner2.png"/>
+	<div class="top-slider">
+		<ul class="top-slider-imgbox" id="imgbox">
+			<li>
+				<a href="javascript:;">
+					<img src="static/img/banner1.png" alt="" />
+				</a>
+			</li>
+			<li>
+					<a href="javascript:;">
+					<img src="static/img/banner2.png" alt="" />
+				</a>
+			</li>
+			<li>
+					<a href="javascript:;">
+					<img src="static/img/banner3.png" alt="" />
+				</a>
+			</li>
+		</ul>
+		
+		<div class="top-slider-num">
+			<span><em class="current-num"></em>/<em class="all-num"></em></span>
+		</div>
 	</div>
+	
+	
 	<div class="goon">
-		<a href="">
+		<a href="javascript:;">
 			<img src="static/images/icon_go.png"/>
 		</a>
 	</div>
-	
+	<h2 class="top-title">开展项目（22）</h2>
 	
 	<div class="yiliao-intro">
-		<h2 class="">开展项目（22）</h2>
 		<div class="yiliao-content">
 			针灸、推拿、保健按摩、理疗、电疗、牵引、火罐、雷火灸、
 			蜡疗、中药外敷、中药熏蒸、小针刀疗法、微创穴位埋线、穴
@@ -39,9 +60,49 @@
 	</div>
 	
 	<div class="yuyue-wrap">
+		
 		<div class="yuyue-date">
-			
+			<div class="yuyue-week">
+				<span>日</span><span>日</span><span>日</span><span>日</span><span>日</span><span>日</span><span>日</span>
+			</div>
+			<div class="yuyue-day-cell">
+				<div class="yuyue-day today">
+					<em>9</em>
+					<span>今日</span>
+				</div>
+				
+				<div class="yuyue-day">
+					<em>9</em>
+					<span>预约</span>
+				</div>
+				
+				<div class="yuyue-day">
+					<em>9</em>
+					<span>预约</span>
+				</div>
+				
+				<div class="yuyue-day">
+					<em>9</em>
+					<span>预约</span>
+				</div>
+				
+				<div class="yuyue-day">
+					<em>9</em>
+					<span>预约</span>
+				</div>
+				
+				<div class="yuyue-day">
+					<em>9</em>
+					<span>预约</span>
+				</div>
+				
+				<div class="yuyue-day">
+					<em>9</em>
+					<span>预约</span>
+				</div>
+			</div>
 		</div>
+		
 		<div class="doctor-list">
 			<div class="doctor-item">
 				<div class="doctor-img">
@@ -77,8 +138,51 @@
 	</div>
 	
 <script src="static/js/jquery-3.1.1.min.js"></script>
-<script src="static/amazeui/js/amazeui.min.js"></script>
-<script src="static/js/app.js"></script>
+<script src="static/js/common.js"></script>
+<script type="text/javascript">
+// 获取本地时间
+var myDate = new Date();
+var year = myDate.getFullYear();
+var month = myDate.getMonth()+1;
+var day = myDate.getDate();
+var newData = year+'-'+month+'-'+day;
+console.log(newData);
+//
+//var hour = myDate.getHours();
+//var minute =myDate.getMinutes();
+//if (minute<=9) {
+//	minute = '0'+minute;
+//}
+//var newTime = hour+':'+minute;
+//console.log(newTime)
 
+var weekDay = myDate.getDay();
+switch (weekDay){
+	case 0:
+		weekDay='星期日'
+		break;
+	case 1:
+		weekDay='星期一'
+		break;
+	case 2:
+		weekDay='星期二'
+		break;
+	case 3:
+		weekDay='星期三'
+		break;
+	case 4:
+		weekDay='星期四'
+		break;
+	case 5:
+		weekDay='星期五'
+		break;
+	case 6:
+		weekDay='星期六'
+		break;
+	default:
+		break;
+}
+console.log(weekDay)
+</script>
 </body>
 </html>

@@ -5,22 +5,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
   <title>必看景区</title>
-  <link rel="stylesheet" href="static/amazeui/css/amazeui.min.css">
+  <link rel="stylesheet" href="static/css/common.css">
   <link rel="stylesheet" href="static/css/app.css">
 </head>
 <body class="">
 	<div class="scenic-list">
-		<div class="scenic-item">
-			<div class="scenic-item-slider">
-				<ul>
+			<div class="top-slider">
+				<ul class="top-slider-imgbox" id="imgbox">
 					<li>
-						<img src="static/img/pubu.png"/>
-						<p>
-							<em>1/4</em>
-							<span>某某瀑布</span>
-						</p>
+						<a href="javascript:;">
+							<img src="static/img/banner1.png" alt="" />
+						</a>
+					</li>
+					<li>
+							<a href="javascript:;">
+							<img src="static/img/banner2.png" alt="" />
+						</a>
+					</li>
+					<li>
+							<a href="javascript:;">
+							<img src="static/img/banner3.png" alt="" />
+						</a>
 					</li>
 				</ul>
+				
+				<div class="top-slider-num">
+					<span><em class="current-num"></em>/<em class="all-num"></em></span>
+				</div>
 			</div>
 			
 			<div class="scenic-item-info">
@@ -77,8 +88,7 @@
 	</div>
 
 <script src="static/js/jquery-3.1.1.min.js"></script>
-<script src="static/amazeui/js/amazeui.min.js"></script>
-<script src="static/js/app.js"></script>
+<script src="static/js/common.js"></script>
 
 </body>
 </html>

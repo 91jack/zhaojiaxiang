@@ -1,3 +1,77 @@
+/*必看景区 scenic.html
+ -------------------------------*/
+.scenic-item-slider {
+	height: 17rem;
+	background: #007AFF;
+}
+
+.scenic-item-info {
+	padding: 1rem 1.5rem;
+}
+.scenic-item-intro {
+	color:#999;
+	
+}
+.scenic-item-status {
+	display: inline-block;
+	width: 4rem;
+	height: 2rem;
+	line-height: 2rem;
+	background: #FFF6EB;
+	color: #FF6A30;
+	font-size: 1.2rem;
+	text-align: center;
+	border-radius: 1rem;
+}
+/*休整状态*/
+.off {
+	color: #999;
+	background: #f4f4f4;
+}
+.scenic-item-name {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color:#333;
+	padding-left: 1rem;
+}
+
+.scenic-item-content {
+	color: #999;
+	padding: .3rem 0;
+}
+.scenic-item-footer {
+	height: 5rem;
+	line-height: 5rem;
+	border-top: 1px solid #f4f4f4;
+	border-bottom: 1px solid #f4f4f4;
+	position: relative;
+}
+.scenic-item-footer a{
+	display: block;
+	width: 50%;
+	float:left;
+	text-align: center;
+	color: #22C41E;
+}
+.scenic-item-footer .line {
+	display: block;
+	width: 1px;
+	height: 3rem;
+	background: #f4f4f4;
+	position: absolute;
+	left: 50%;
+	top: 1rem;
+	z-index: 10;
+}
+.scenic-item-footer a img {
+	display:inline-block;
+	margin-right: .6rem;
+	width: 2rem;
+	height: 2rem;
+}
+
+
+
 /*康养赵家 climate.html
  ------------------------------------*/
 .climate-page {
@@ -99,6 +173,161 @@
 	line-height: 1.5rem;
 	color: #666;
 }
+
+/*康养医疗 yiliao.html
+ ---------------------*/
+.yiliao-page {
+	background: #f0f0f0;
+}
+
+.yiliao-intro {
+	background: #fff;
+	margin-bottom: 1rem;
+}
+
+.yiliao-content {
+	padding: 1rem;
+	font-size: 1.083333rem;
+	line-height: 1.875rem;
+	color: #666;
+}
+.yiliao-into-footer {
+	height: 3.333333rem;
+	line-height: 3.333333rem;
+	padding: 0 1rem;
+	/*background: red;*/
+}
+.yiliao-into-footer img {
+	margin-top: 1rem;
+}
+.yiliao-addr {
+	float: left;
+}
+.yiliao-addr img {
+	width: 0.916666rem;
+	height: 1.333333rem;
+}
+.yiliao-addr span {
+	margin-left: .5rem;
+	font-size: 1.083333rem;
+	color: #333;
+	font-weight: bold;
+}
+.yiliao-tel {
+	display: block;
+	float: right;
+}
+.yiliao-tel img {
+	display: inline-block;
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+.yuyue-wrap {
+	background: #fff;
+}
+.yuyue-date {
+	height: 6.666666rem;
+	background: #009CDA;
+	
+}
+/*.yuyue-date li {
+	float: left;
+	margin-right: 1rem;
+}
+.yuyue-date li:last-child {
+	padding-right: 0;
+}*/
+.yuyue-week {
+	border-bottom: 1px solid #e6e6e6;
+	padding: 0 1rem;
+}
+.yuyue-week span {
+	display: inline-block;
+	width: 3.333333rem;
+	text-align: center;
+	height:2.5rem;
+	line-height: 2.5rem;
+	font-size: 1.166666rem;
+	color: #585858;
+	/*margin-right: 0.8rem;*/
+}
+.yuyue-week span:last-child,
+.yuyue-day:last-child{
+	margin-right: 0;
+}
+.yuyue-day-cell {
+	padding: 0 1rem;
+}
+.yuyue-day {
+	width: 3.333333rem;
+	height: 3.333333rem;
+	float:left;
+	background: #22C41E;
+	border-radius: 50%;
+	text-align: center;
+	color: #585858;
+	margin: 0.416666rem 0;
+	/*margin-right: 0.8rem;*/
+}
+.today {
+	color:#fff;
+}
+.yuyue-day span {
+	display: block;
+	font-size: 1.083333rem;
+}
+.yuyue-day em {
+	display: block;
+	font-size: 0.833333rem;
+}
+
+
+
+
+
+.doctor-list {
+	
+}
+.doctor-item {
+	height: 7rem;
+	border-bottom:1px solid #e6e6e6;
+	padding: 1rem;
+}
+.doctor-item .doctor-img {
+	width: 6rem;
+	height: 6rem;
+	overflow: hidden;
+	float: left;
+	/*border:1px solid red;*/
+}
+.doctor-item .doctor-img img{
+	width: 6rem;
+	height: 6rem;
+}
+.doctor-item .doctor-info {
+	float: left;
+}
+.doctor-item .doctor-info p {
+	margin: 0;
+	padding: 0;
+}
+.doctor-item .yuyue-action {
+	float:right;
+}
+.doctor-item .yuyue-action a{
+	display: block;
+	width: 7rem;
+	height: 3rem;
+	line-height: 3rem;
+	background:#22C41E ;
+	color:#fff;
+	border-radius: .5rem;
+	text-align: center;
+	font-size: 1rem;
+}
+
+
 
 /*预约挂号 yuyue.html
  -------------------------*/
