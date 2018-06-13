@@ -1,3 +1,79 @@
+/*康养赵家 climate.html
+ ------------------------------------*/
+.climate-page {
+	width: 100%;
+	/*height: 100%;*/
+	background: url(../images/climate_bg.png) no-repeat;
+	background-position: center;
+    background-size: 100%;
+   	height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.climate-content {
+	width: 90%;
+	height: 34rem;
+	color:#fff;
+	background: rgba(0,0,0,.3);
+	border-radius: 0.5rem;
+	margin: 5rem auto;
+	padding: 0;
+}
+
+.climate-list {
+	padding: 0 1rem;
+}
+.climate-list li{
+	clear: both;
+	height: 5rem;
+	line-height:  5rem;
+	border-bottom: 1px solid #fff;
+}
+.climate-list li:first-child {
+	height: 3rem;
+	line-height: 3rem;
+}
+.climate-list li:last-child {
+	border-bottom: none;
+}
+
+.climate-title {
+	font-size: 1.583333rem;
+}
+.climate-list li .img-box{
+	width: 3rem;
+	height: 3rem;
+	display: inline-block;
+	float: left;
+	margin-top: 1rem;
+}
+
+.climate-list li img{	
+	display: block;
+	margin: 0 auto;
+	vertical-align: middle;
+}
+.climate-list li span {
+	float: left;
+	padding-left: .5rem;
+}
+.climate-list li .fr em {
+	font-size: 1rem;
+}
+.climate-list li:nth-child(3) img,
+.climate-list li:nth-child(4) img,
+.climate-list li:nth-child(5) img {
+	margin-top: .5rem;
+}
+
+.climate-footer {
+	text-align: center;
+	color:#fff;
+	font-size: 1.458333rem;
+}
+
 /*候鸟之家 houniao.html
  -------------------------*/
 .houniao-page {
@@ -29,6 +105,61 @@
 .yuyue-page {
 	background: #F2F8F8;
 }
+
+.yuyue-status img{
+	display: block;
+	width: 6.25rem;
+	height: 6.25rem;
+	margin: 1.416666rem auto;
+}
+.yuyue-status p {
+	text-align: center;
+	font-size: 1.416666rem;
+	color:#262626;
+}
+.yuyue-info li {
+	clear: both;
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 1.416666rem;
+}
+.yuyue-info li span{
+	color: #666;
+	float: left;
+}
+.yuyue-info li em{
+	color: #262626;
+	float: right;
+}
+.yuyue-btn {
+	display: block;
+	width: 100%;
+	height: 3.75rem;
+	line-height: 3.75rem;
+	font-size: 1.25rem;
+	text-align: center;
+	color:#fff;
+	background:#22C41E ;
+	border-radius: 0.5rem;
+	margin: 1rem auto;
+}
+.yuyue-btn:active,
+.yuyue-btn:focus {
+	color:#fff;
+}
+.goindex {
+	background: #fff;
+	border:1px solid #199116;
+	color:#22C41E;
+}
+
+
+
+
+
+
+
+
 
 /*我为你代言 daiyan.html
  -------------------------*/
