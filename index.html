@@ -5,9 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
   <title>白马之乡</title>
-  <link rel="stylesheet" href="static/amazeui/css/amazeui.min.css">
-  <link rel="stylesheet" type="text/css" href="static/swiper/swiper.min.css"/>
-  <link rel="stylesheet" href="static/css/app.css">
+  <!--<link rel="stylesheet" href="static/amazeui/css/amazeui.min.css">
+  <link rel="stylesheet" type="text/css" href="static/swiper/swiper.min.css"/>-->
+  <link rel="stylesheet" type="text/css" href="static/css/common.css"/>
+  <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+  <!--<link rel="stylesheet" href="static/css/app.css">-->
 </head>
 <body>
 	<div class="index-header">
@@ -15,7 +17,17 @@
 		<a href="map.html" class="clickmap">地图</a>
 	</div>
 	
-	<div class="index-slider am-cf">
+	<div class="index-slider">
+		<ul>
+			<li>
+				<a href="">
+					<img src="static/img/index-banner1.png"/>
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+	<!--<div class="index-slider am-cf">
 		<div class="swiper-container">
 		  <div class="swiper-wrapper">
 		    <div class="swiper-slide swiper-slide-center none-effect">
@@ -29,9 +41,9 @@
 		    </div>
 		  </div>
 		</div>
-	</div>
+	</div>-->
 	
-	<div class="index-icon am-cf">
+	<!--<div class="index-icon am-cf">
 		<ul>
 			<li>
 				<a href="scenic.html">
@@ -141,38 +153,27 @@
 				</a>
 			</li>
 		</ul>
-	</div>
+	</div>-->
 
 
 
 <script src="static/js/jquery-3.1.1.min.js"></script>
-<script src="static/amazeui/js/amazeui.min.js"></script>
-<script src="static/swiper/swiper.min.js"></script>
-<script src="static/js/app.js"></script>
-<script type="text/javascript">
-	window.onload = function() {
-    var swiper = new Swiper('.swiper-container',{
-		autoplay:1000,
-		speed:1000,
-		autoplayDisableOnInteraction : false,
-		loop:true,
-		centeredSlides : true,
-		slidesPerView:2,
-//      pagination : '.swiper-pagination',
-//		paginationClickable:true,
-//		prevButton:'.swiper-button-prev',
-//      nextButton:'.swiper-button-next',
-		onInit:function(swiper){
-			swiper.slides[2].className="swiper-slide swiper-slide-active";//第一次打开不要动画
-			},
-        breakpoints: { 
-                668: {
-                    slidesPerView: 1,
-                 }
-            }
-		});
-		}
+<!--<script src="static/amazeui/js/amazeui.min.js"></script>-->
 
+<!--<script src="static/js/app.js"></script>-->
+<script type="text/javascript">
+//	 (function (doc, win) {    
+//          var docEl = doc.documentElement,    
+//          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',    
+//          recalc = function () {    
+//          var clientWidth = docEl.clientWidth;    
+//          if (!clientWidth) return;    
+//          docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';    
+//      };    
+//      if (!doc.addEventListener) return;    
+//      win.addEventListener(resizeEvt, recalc, false);    
+//      doc.addEventListener('DOMContentLoaded', recalc, false);    
+//      })(document, window);    
 </script>
 </body>
 </html>

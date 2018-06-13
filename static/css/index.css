@@ -1,0 +1,58 @@
+/*首页*/
+html {
+	font-size: 12px;
+}
+.index-header {
+	width: 100%;
+	height: 3.34rem;
+	/*background: red;*/
+}
+.index-header a{
+	display: block;
+	width: 50%;
+	float:left;
+	font-size: 1.34rem;
+	text-align: center;
+	font-weight: bold;
+	height: 3.34rem;
+	line-height: 3.34rem;
+	position: relative;
+}
+.index-header a:first-child {
+	/*background: gray;*/
+	text-indent: 8rem;
+	
+}
+.index-header a:last-child {
+	text-indent: -8rem;
+}
+.index-header a.active {
+	color: #0BBE06;
+}
+.index-header a:after {
+	position: absolute;
+	content: '';
+	width: 1.4rem;
+	height: .3rem;
+	border-radius: .5rem;
+	background: #0BBE06;
+	bottom: 0;
+}
+.index-header .recommend:after {
+	right:2.5rem;
+}
+.index-header .clickmap:after {
+	left:2.5rem;
+	display: none;
+}
+
+/*首页轮播*/
+.index-slider {
+	height: 15.42rem;
+	padding: 0.7rem 0;
+	background:#f1f1f1 ;
+	overflow: hidden;
+}
+.index-slider img {
+	display: none;
+}
