@@ -126,12 +126,14 @@ input[type="text"] {
 .top-slider {
 	width: 100%;
 	height: 14.583333rem;
-	position: relative;
 	overflow: hidden;
-
+	position: relative;
 }
 .top-slider-imgbox {
+	
 	height: 14.583333rem;
+	position: relative;
+	overflow: hidden;
 }
 .top-slider-imgbox li {
 	width: 31.25rem;
@@ -182,6 +184,8 @@ input[type="text"] {
 .top-slider-item-text span {
 	margin: 0 1rem;	
 }
+
+
 
 /*去这里*/
 .goon {

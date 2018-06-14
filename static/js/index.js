@@ -5,6 +5,7 @@ var imgNum = $('.top-slider-imgbox li').length;
 $('.all-num').text(imgNum)
 var index = 1;
 var imgBox = document.getElementById("imgbox")
+console.log(imgBox)
 $(imgBox).css('width', width * imgNum + 'px');
 //$('.top-slider-imgbox li').css('width', width + 'px');
 
@@ -27,13 +28,13 @@ var setTranlateX = function(translatex) {
 
 var index = 0;
 $('.current-num').text(index + 1)
-//var timer = setInterval(function() {
-//	index++;
-//	// 增加过渡
-//	addTransition();
-//	//位移
-//	setTranlateX(-index * width);
-//}, 3000);
+var timer = setInterval(function() {
+	index++;
+	// 增加过渡
+	addTransition();
+	//位移
+	setTranlateX(-index * width);
+}, 3000);
 // 怎么监听过渡截止的时间 过渡结束S事件
 imgBox.addEventListener('transitionend', function() {
 	// 无缝滚动
@@ -61,8 +62,8 @@ var distanceX = 0; //记录坐标轴的改变
 var ismove = false;
 // 可以滑动（touch事件  监听触摸点坐标的改变距离 位移）
 imgBox.addEventListener("touchstart", function(e) {
-	// 在做滑动之前清除定时器
-	//clearInterval(timer);
+	 //在做滑动之前清除定时器
+	clearInterval(timer);
 	//记录开始的位移
 	startX = e.touches[0].clientX;
 	// console.log(startX);
@@ -105,15 +106,15 @@ imgBox.addEventListener("touchend", function(e) {
 		}
 	}
 	// 为了严谨，保证只加一次定时器
-	//clearInterval(timer);
+	clearInterval(timer);
 	// 手指离开的时候要加上定时器
-//	timer = setInterval(function() {
-//		index++;
-//		// 增加过渡
-//		addTransition();
-//		//位移
-//		setTranlateX(-index * width);
-//	}, 2000);
+	timer = setInterval(function() {
+		index++;
+		// 增加过渡
+		addTransition();
+		//位移
+		setTranlateX(-index * width);
+	}, 2000);
 	//重置参数，表面滑动结束后对效果产生影响
 	startX = 0;
 	distanceX = 0;

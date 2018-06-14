@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="top-slider">
-		<ul class="top-slider-imgbox" id="imgbox">
+		<ul class="top-slider-imgbox">
 			<li>
 				<a href="javascript:;">
 					<img src="static/img/banner1.png" alt="" />
@@ -65,5 +65,17 @@
 <script src="static/js/jquery-3.1.1.min.js"></script>
 <script src="static/js/common.js"></script>
 <script src="static/js/slider.js"></script>
+<script type="text/javascript">
+		// 轮播调用
+	$('.top-slider-imgbox').each(function(){
+		var imgbox = $(this)[0];
+		var li = $(this).children('li');
+		
+		var currentNum = $('.current-num');
+		var allNum = $('.all-num');
+		console.log(currentNum,allNum)
+		slider( imgbox, li,currentNum,allNum)
+	})
+</script>
 </body>
 </html>

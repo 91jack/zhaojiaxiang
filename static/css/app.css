@@ -10,7 +10,7 @@
 }
 .scenic-item-status {
 	display: inline-block;
-	width: 3.333333rem;
+	width: 4rem;
 	height: 1.5rem;
 	line-height: 1.5rem;
 	background: #FFF6EB;
@@ -177,7 +177,33 @@
 }
 
 
-
+.isyiniao {
+	color:#0BBE06;
+	font-size: 1rem;
+}
+.scenic-item-cell:first-child span{
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 1.083333rem;
+	color:#999;
+	margin-right: 2rem;
+}
+.scenic-item-cell:first-child span em{
+	font-size: 1.083333rem;
+	color:#FF6854;
+}
+.scenic-item-cell:last-child {
+	font-size: 1.083333rem;
+	color:#FF6854;
+}
+.scenic-item-cell:last-child span{
+	margin-right: 2rem;
+}
+.scenic-item-cell:last-child em{
+	font-size: 1.25rem;
+	font-weight: bold;
+	color:#FF6854;
+}
 
 
 
@@ -388,35 +414,59 @@
 
 
 
-
+/*医生列表*/
 .doctor-list {
 	
 }
 .doctor-item {
-	height: 7rem;
+	height: 5.083333rem;
 	border-bottom:1px solid #e6e6e6;
 	padding: 1rem;
+	clear: both;
 }
 .doctor-item .doctor-img {
-	width: 6rem;
-	height: 6rem;
+	width: 5rem;
+	height: 5rem;
 	overflow: hidden;
 	float: left;
-	/*border:1px solid red;*/
+	
 }
 .doctor-item .doctor-img img{
-	width: 6rem;
-	height: 6rem;
+	width: 5rem;
+	height: 5rem;
 }
 .doctor-item .doctor-info {
 	float: left;
+	margin-left: 1rem;
+	
 }
 .doctor-item .doctor-info p {
 	margin: 0;
 	padding: 0;
+	font-size: 1.083333rem;
+	line-height: 1.8rem;
 }
+.doctor-item .doctor-info p:first-child {
+	font-size: 1.166666rem;
+	font-weight: bold;
+	color:#333;
+}
+.doctor-item .doctor-info p:nth-child(2) {
+	color:#22C41E;
+}
+.doctor-item .doctor-info p:nth-child(3) {
+	color:#999;
+}
+
 .doctor-item .yuyue-action {
 	float:right;
+}
+.doctor-item .yuyue-action p {
+	font-size: 1.25rem;
+	line-height: 2rem;
+	color: #FF6A30;
+	font-weight: bold;
+	text-align: center;
 }
 .doctor-item .yuyue-action a{
 	display: block;
@@ -428,8 +478,15 @@
 	border-radius: .5rem;
 	text-align: center;
 	font-size: 1rem;
+	
 }
-
+.doctor-item .action-off p {
+	color:#ccc;
+}
+.doctor-item .action-off a {
+	background:#ccc ;
+	color:#fff;
+}
 
 
 /*预约挂号 yuyue.html

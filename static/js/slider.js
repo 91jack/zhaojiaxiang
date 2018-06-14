@@ -1,41 +1,36 @@
-function slider(obj){
+function slider( imgbox, li,currentNum,allNum){
 	// 顶部手动轮播图1
 	var width = document.documentElement.clientWidth;
-	var imgNum = $(obj).length;
-	$('.all-num').text(imgNum)
+	var imgNum = $(li).length;
+
+	$(allNum).text(imgNum)
 	var index = 1;
-	var imgBox = document.getElementById("imgbox")
-	$(imgBox).css('width', width * imgNum + 'px');
-	$('.top-slider-imgbox li').css('width', width + 'px');
+
+	$(imgbox).css('width', width * imgNum + 'px');
+	$(li).css('width', width + 'px');
 	
 	// 提取公用方法
 	var addTransition = function() {
 		// 增加过渡
-		imgBox.style.transition = 'all 0.2s';
-		imgBox.style.webkitTransition = "all 0.2s"; //兼容
+		imgbox.style.transition = 'all 0.2s';
+		imgbox.style.webkitTransition = "all 0.2s"; //兼容
 	}
 	var removeTransition = function() {
 		// 清除过渡
-		imgBox.style.transition = 'none';
-		imgBox.style.webkitTransition = "none"; //兼容
+		imgbox.style.transition = 'none';
+		imgbox.style.webkitTransition = "none"; //兼容
 	}
 	var setTranlateX = function(translatex) {
 		// 设置位移
-		imgBox.style.transform = "translateX(" + translatex + "px)";
-		imgBox.style.webkitTramsform = "translateX(" + translatex + "px)";
+		imgbox.style.transform = "translateX(" + translatex + "px)";
+		imgbox.style.webkitTramsform = "translateX(" + translatex + "px)";
 	}
 	
 	var index = 0;
-	$('.current-num').text(index + 1)
-	var timer = setInterval(function() {
-		index++;
-		// 增加过渡
-		addTransition();
-		//位移
-		setTranlateX(-index * width);
-	}, 3000);
+	$(currentNum).text(index + 1)
+
 	// 怎么监听过渡截止的时间 过渡结束S事件
-	imgBox.addEventListener('transitionend', function() {
+	imgbox.addEventListener('transitionend', function() {
 		// 无缝滚动
 		if(index >= imgNum) {
 			// 瞬间定位到第一张
@@ -51,7 +46,7 @@ function slider(obj){
 			setTranlateX(-index * width);
 		}
 		console.log(index)
-		$('.current-num').text(index + 1)
+		$(currentNum).text(index + 1)
 	
 	})
 	
@@ -60,15 +55,13 @@ function slider(obj){
 	// 为了严谨
 	var ismove = false;
 	// 可以滑动（touch事件  监听触摸点坐标的改变距离 位移）
-	imgBox.addEventListener("touchstart", function(e) {
-		// 在做滑动之前清除定时器
-		clearInterval(timer);
+	imgbox.addEventListener("touchstart", function(e) {
 		//记录开始的位移
 		startX = e.touches[0].clientX;
 		// console.log(startX);
 	});
 	
-	imgBox.addEventListener("touchmove", function(e) {
+	imgbox.addEventListener("touchmove", function(e) {
 		var moveX = e.touches[0].clientX;
 		distanceX = moveX - startX;
 		//当distanceX大于0的时候向右滑动，小于0的时候向左滑动
@@ -82,7 +75,7 @@ function slider(obj){
 	});
 	
 	// 手指离开屏幕的时候触发
-	imgBox.addEventListener("touchend", function(e) {
+	imgbox.addEventListener("touchend", function(e) {
 		console.log(distanceX);
 		// 滑动事件结束以后来判断当前滑动距离
 		// 有一个范围，如果滑动的范围大于三分之一则切换图片，如果小于三分之一则定位回去
@@ -104,16 +97,6 @@ function slider(obj){
 				setTranlateX(-index * width);
 			}
 		}
-		// 为了严谨，保证只加一次定时器
-		clearInterval(timer);
-		// 手指离开的时候要加上定时器
-		timer = setInterval(function() {
-			index++;
-			// 增加过渡
-			addTransition();
-			//位移
-			setTranlateX(-index * width);
-		}, 2000);
 		//重置参数，表面滑动结束后对效果产生影响
 		startX = 0;
 		distanceX = 0;

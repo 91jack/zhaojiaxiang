@@ -109,7 +109,7 @@
 				<div class="scenic-item-intro">
 					<span class="scenic-item-status">实时</span>
 					<span class="scenic-item-name">鸿运酒店</span>
-					<span class="fr">已对接医疗服务</span>
+					<span class="fr isyiniao">已对接医疗服务</span>
 				</div>
 			
 				<div class="scenic-item-content">
@@ -119,8 +119,8 @@
 						<span>餐位数：<em>245人</em></span>
 					</div>
 					<div class="scenic-item-cell">
-						<span>人均：￥ 100元/人/天</span>
-						<span>月租：￥ 1800元/人/月</span>
+						<span>人均：<em>￥ 100元/人/天</em></span>
+						<span>月租：<em>￥ 1800元/人/月</em></span>
 					</div>
 				</div>
 			</div>
@@ -137,11 +137,78 @@
 				</a>
 			</div>
 		</div>
+		
+		<div class="minsu-item">
+			<div class="top-slider">
+				<ul class="top-slider-imgbox" id="imgbox">
+					<li>
+						<a href="javascript:;">
+							<img src="static/img/banner1.png" alt="" />
+						</a>
+						<div class="top-slider-item-text">
+							<em class="current-num"></em>/<em class="all-num"></em>
+							<span>黄果树大瀑布1111111</span>
+						</div>
+					</li>
+					<li>
+							<a href="javascript:;">
+								<img src="static/img/banner2.png" alt="" />
+							</a>
+							<div class="top-slider-item-text">
+								<em class="current-num"></em>/<em class="all-num"></em>
+								<span>黄果树大瀑布22222222222</span>
+							</div>
+					</li>
+					<li>
+							<a href="javascript:;">
+								<img src="static/img/banner3.png" alt="" />
+							</a>
+							<div class="top-slider-item-text">
+								<em class="current-num"></em>/<em class="all-num"></em>
+								<span>黄果树大瀑布333333</span>
+							</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="scenic-item-info">
+				<div class="scenic-item-intro">
+					<span class="scenic-item-status">实时</span>
+					<span class="scenic-item-name">鸿运酒店</span>
+					<span class="fr isyiniao">已对接医疗服务</span>
+				</div>
+			
+				<div class="scenic-item-content">
+					<div class="scenic-item-cell">
+						<span>客房数：<em>25人</em></span>
+						<span>床位数：<em>25人</em></span>
+						<span>餐位数：<em>245人</em></span>
+					</div>
+					<div class="scenic-item-cell">
+						<span>人均：<em>￥ 100元/人/天</em></span>
+						<span>月租：<em>￥ 1800元/人/月</em></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="scenic-item-footer">
+				<a href="">
+					<img src="static/images/icon_phone.png" alt="" />
+					<span>在线联系</span>
+				</a>
+				<span class="line"></span>
+				<a href="">
+					<img src="static/images/icon_daohang.png" alt="" />
+					<span>在线导航</span>
+				</a>
+			</div>
+		</div>
+		
 	</div>
 	
 <script src="static/js/jquery-3.1.1.min.js"></script>
 <script src="static/js/common.js"></script>
-<script src="static/js/slider.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/js/slider.js"></script>
 <script type="text/javascript">
 	// 筛选条件
 	$('.filter-btn li').each(function(){
@@ -162,6 +229,15 @@
 		});
 	})
 	
+		// 轮播调用
+	$('.top-slider-imgbox').each(function(){
+		var imgbox = $(this)[0];
+		var li = $(this).children('li');
+		var currentNum = $(this).find('.current-num');
+		var allNum = $(this).find('.all-num');
+		//console.log(currentNum,allNum)
+		slider( imgbox, li,currentNum,allNum)
+	})
 	
 </script>
 </body>

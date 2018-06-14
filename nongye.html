@@ -5,27 +5,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
   <title>农业基地</title>
-  <link rel="stylesheet" href="static/amazeui/css/amazeui.min.css">
+  <link rel="stylesheet" href="static/css/common.css">
   <link rel="stylesheet" href="static/css/app.css">
 </head>
 <body class="">
 	<div class="scenic-list">
 		<div class="scenic-item">
-			<div class="scenic-item-slider">
-				<ul>
+			<div class="top-slider">
+				<ul class="top-slider-imgbox">
 					<li>
-						<img src="static/img/pubu.png"/>
-						<p>
-							<em>1/4</em>
-							<span>某某瀑布</span>
-						</p>
+						<a href="javascript:;">
+							<img src="static/img/banner1.png" alt="" />
+						</a>
+						<div class="top-slider-item-text">
+							<em class="current-num"></em>/<em class="all-num"></em>
+							<span>黄果树大瀑布1111111</span>
+						</div>
+					</li>
+					<li>
+							<a href="javascript:;">
+								<img src="static/img/banner2.png" alt="" />
+							</a>
+							<div class="top-slider-item-text">
+								<em class="current-num"></em>/<em class="all-num"></em>
+								<span>黄果树大瀑布22222222222</span>
+							</div>
+					</li>
+					<li>
+							<a href="javascript:;">
+								<img src="static/img/banner3.png" alt="" />
+							</a>
+							<div class="top-slider-item-text">
+								<em class="current-num"></em>/<em class="all-num"></em>
+								<span>黄果树大瀑布333333</span>
+							</div>
+					</li>
+					<li>
+							<a href="javascript:;">
+								<img src="static/img/index_banner1.png" alt="" />
+							</a>
+							<div class="top-slider-item-text">
+								<em class="current-num"></em>/<em class="all-num"></em>
+								<span>黄果树大瀑布444</span>
+							</div>
 					</li>
 				</ul>
 			</div>
 			
 			<div class="scenic-item-info">
 				<div class="scenic-item-intro">
-					<span class="scenic-item-status">营业</span>
+					<span class="scenic-item-status">采摘月</span>
 					<span class="scenic-item-name">赵家乡水坝</span>
 				</div>
 			
@@ -46,14 +75,43 @@
 				</a>
 			</div>
 		</div>
-				<div class="scenic-item">
-			<div class="scenic-item-slider">
-				<img src="static/img/pubu.png" alt="" />
+		
+		<div class="scenic-item">
+			<div class="top-slider">
+				<ul class="top-slider-imgbox">
+					<li>
+						<a href="javascript:;">
+							<img src="static/img/banner1.png" alt="" />
+						</a>
+						<div class="top-slider-item-text">
+							<em class="current-num"></em>/<em class="all-num"></em>
+							<span>黄果树大瀑布1111111</span>
+						</div>
+					</li>
+					<li>
+							<a href="javascript:;">
+								<img src="static/img/banner2.png" alt="" />
+							</a>
+							<div class="top-slider-item-text">
+								<em class="current-num"></em>/<em class="all-num"></em>
+								<span>黄果树大瀑布22222222222</span>
+							</div>
+					</li>
+					<li>
+							<a href="javascript:;">
+								<img src="static/img/banner3.png" alt="" />
+							</a>
+							<div class="top-slider-item-text">
+								<em class="current-num"></em>/<em class="all-num"></em>
+								<span>黄果树大瀑布333333</span>
+							</div>
+					</li>
+				</ul>
 			</div>
 			
 			<div class="scenic-item-info">
 				<div class="scenic-item-intro">
-					<span class="scenic-item-status off">休整</span>
+					<span class="scenic-item-status off">生长中</span>
 					<span class="scenic-item-name">赵家乡水坝</span>
 				</div>
 			
@@ -77,8 +135,21 @@
 	</div>
 
 <script src="static/js/jquery-3.1.1.min.js"></script>
-<script src="static/amazeui/js/amazeui.min.js"></script>
-<script src="static/js/app.js"></script>
-
+<script src="static/js/common.js"></script>
+<script src="static/js/slider.js"></script>
+<script type="text/javascript">
+	// 轮播调用
+	$('.top-slider-imgbox').each(function(){
+		var imgbox = $(this)[0];
+		var li = $(this).children('li');
+		var currentNum = $(this).find('.current-num');
+		var allNum = $(this).find('.all-num');
+		//console.log(currentNum,allNum)
+		slider( imgbox, li,currentNum,allNum)
+	})
+		
+		
+		
+</script>
 </body>
 </html>

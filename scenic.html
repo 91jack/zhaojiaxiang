@@ -12,7 +12,7 @@
 	<div class="scenic-list">
 		<div class="scenic-item">
 			<div class="top-slider">
-				<ul class="top-slider-imgbox" id="imgbox">
+				<ul class="top-slider-imgbox">
 					<li>
 						<a href="javascript:;">
 							<img src="static/img/banner1.png" alt="" />
@@ -38,6 +38,15 @@
 							<div class="top-slider-item-text">
 								<em class="current-num"></em>/<em class="all-num"></em>
 								<span>黄果树大瀑布333333</span>
+							</div>
+					</li>
+					<li>
+							<a href="javascript:;">
+								<img src="static/img/index_banner1.png" alt="" />
+							</a>
+							<div class="top-slider-item-text">
+								<em class="current-num"></em>/<em class="all-num"></em>
+								<span>黄果树大瀑布444</span>
 							</div>
 					</li>
 				</ul>
@@ -69,7 +78,7 @@
 		
 		<div class="scenic-item">
 			<div class="top-slider">
-				<ul class="top-slider-imgbox" id="imgbox">
+				<ul class="top-slider-imgbox">
 					<li>
 						<a href="javascript:;">
 							<img src="static/img/banner1.png" alt="" />
@@ -127,9 +136,20 @@
 
 <script src="static/js/jquery-3.1.1.min.js"></script>
 <script src="static/js/common.js"></script>
-<script src="static/js/slider.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/js/slider.js"></script>
 <script type="text/javascript">
-		slider('#imgbox li')
+	// 轮播调用
+	$('.top-slider-imgbox').each(function(){
+		var imgbox = $(this)[0];
+		var li = $(this).children('li');
+		var currentNum = $(this).find('.current-num');
+		var allNum = $(this).find('.all-num');
+		//console.log(currentNum,allNum)
+		slider( imgbox, li,currentNum,allNum)
+	})
+		
+		
+		
 </script>
 </body>
 </html>

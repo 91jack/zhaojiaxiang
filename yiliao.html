@@ -10,7 +10,7 @@
 </head>
 <body class="yiliao-page">
 	<div class="top-slider">
-		<ul class="top-slider-imgbox" id="imgbox">
+		<ul class="top-slider-imgbox">
 			<li>
 				<a href="javascript:;">
 					<img src="static/img/banner1.png" alt="" />
@@ -106,7 +106,7 @@
 		<div class="doctor-list">
 			<div class="doctor-item">
 				<div class="doctor-img">
-					<img src="" alt="" />
+					<img src="static/images/doctor_avatar.png" alt="" />
 				</div>
 				<div class="doctor-info">
 					<p>张学名</p>
@@ -121,14 +121,14 @@
 			
 			<div class="doctor-item">
 				<div class="doctor-img">
-					<img src="" alt="" />
+					<img src="static/images/doctor_avatar.png" alt="" />
 				</div>
 				<div class="doctor-info">
 					<p>张学名</p>
 					<p>上午8:00-12:00</p>
 					<p>全科主治医师</p>
 				</div>
-				<div class="yuyue-action">
+				<div class="yuyue-action action-off">
 					<p>余号 <span>3</span></p>
 					<a href="">立即预约</a>
 				</div>
@@ -141,7 +141,14 @@
 <script src="static/js/common.js"></script>
 <script src="static/js/slider.js"></script>
 <script type="text/javascript">
-	slider('#imgbox li')
+	// 轮播调用
+	$('.top-slider-imgbox').each(function(){
+		var imgbox = $(this)[0];
+		var li = $(this).children('li');
+		var currentNum = $('.current-num');
+		var allNum = $('.all-num');
+		slider( imgbox, li,currentNum,allNum)
+	})
 	
 	
 // 获取本地时间
