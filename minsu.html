@@ -41,28 +41,28 @@
 		
 		<div class="filter-condition">
 			<ul class="filter-condition-item">
-				<li data-value="0">全部</li>
+				<li data-value="0" class="active">全部</li>
 				<li data-value="1">乡村酒店</li>
 				<li data-value="2">农家乐</li>
 				<li data-value="3">民宿</li>
 			</ul>
 			
 			<ul class="filter-condition-item">
-				<li data-value="0">全部</li>
+				<li data-value="0" class="active">全部</li>
 				<li data-value="1">住宿+餐饮</li>
 				<li data-value="2">住宿+医疗服务</li>
 				<li data-value="3">住宿+餐饮+医疗服务</li>
 			</ul>
 			
 			<ul class="filter-condition-item">
-				<li data-value="0">全部</li>
+				<li data-value="0" class="active">全部</li>
 				<li data-value="1">100及以下</li>
 				<li data-value="2">100~200</li>
 				<li data-value="3">200以上</li>
 			</ul>
 			
 			<ul class="filter-condition-item">
-				<li data-value="0">全部</li>
+				<li data-value="0" class="active">全部</li>
 				<li data-value="1">1500及以下</li>
 				<li data-value="2">1500~2000</li>
 				<li data-value="3">2000以上</li>
@@ -215,14 +215,16 @@
 		$(this).on('click',function(){
 			var index = $(this).index(); 
 			$(this).addClass('active').siblings().removeClass('active');
-			$('.filter-condition').slideDown();
-			$('.filter-condition-item').eq(index).slideDown().siblings().slideUp();
+			$('.filter-condition').show();
+			$('.filter-condition-item').eq(index).show().siblings().hide();
 			
 			$('.filter-condition-item li').each(function(){
 				$(this).bind('click', function(){
 					console.log($(this).attr('data-value'));
 					var selectValue = $(this).attr('data-value');
-					$('.filter-condition').slideUp(1000);
+					
+					$(this).addClass('active').siblings().removeClass('active')
+					$('.filter-condition').hide();
 				})
 			})
 		
