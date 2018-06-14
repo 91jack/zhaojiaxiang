@@ -105,9 +105,9 @@
 				</li>
 			</ul>
 		</div>
-		<a class="icon-more" href="climate.html">
+		<!--<a class="icon-more" href="climate.html">
 			<img src="static/images/icon_more.png"/>
-		</a>
+		</a>-->
 	</div>
 
 	
@@ -290,7 +290,17 @@ imgBox.addEventListener("touchend", function(e) {
 	ismove = false;
 });
 	
-	$('.index-scroll').css('transform','translateY(-4.166666rem)')
+	// 气候上下轮播
+	var index = 0
+	var timer = setInterval(function(){
+		
+		$('.index-scroll').css('transform','translateY(' + 4.166666* (-index) + 'rem)');
+		index++;
+		if(index >= $('.index-scroll li').length ){
+			index = 0;
+		}
+	},2000)
+	
 </script>
 </body>
 </html>
