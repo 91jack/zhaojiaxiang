@@ -4,7 +4,7 @@ function slider( imgbox, li,currentNum,allNum){
 	var imgNum = $(li).length;
 
 	$(allNum).text(imgNum)
-	var index = 1;
+	//var index = 1;
 
 	$(imgbox).css('width', width * imgNum + 'px');
 	$(li).css('width', width + 'px');
@@ -40,8 +40,9 @@ function slider( imgbox, li,currentNum,allNum){
 			setTranlateX(-index * width);
 		}
 		// 无缝滑动（定时器、过渡、位移）
-		else if(index <= 0) {
-			index = imgNum - 1;
+		else if(index < 0) {
+			index = imgNum-1;
+			console.log(index)
 			removeTransition();
 			setTranlateX(-index * width);
 		}

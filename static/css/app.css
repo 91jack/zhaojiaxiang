@@ -156,7 +156,7 @@
 	position: absolute;
 	top:3.333333rem;
 	left:0;
-	z-index: 10;
+	z-index: 100;
 	background: #fff;
 }
 .filter-condition-item {
