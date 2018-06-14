@@ -124,6 +124,8 @@
 	height: 3.333333rem;
 	/*background: #00FFFF;*/
 	padding: 0 1rem;
+	position: relative;
+	z-index: 55;
 }
 .filter-btn li{
 	width: 25%;
@@ -139,6 +141,7 @@
 .filter-btn li span {
 	display: inline-block;
 	width: 4.5rem;
+	height: 3.333333rem;
 	text-align: center;
 	/*margin-right: .5rem;*/
 	overflow: hidden;
@@ -219,7 +222,18 @@
 	color:#FF6854;
 }
 
-
+/*遮罩*/
+.mask {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	background: rgba(0,0,0,.5);
+	z-index: 20;
+	left:0;
+	top: 8rem;
+	bottom:0;
+	display: none;
+}
 
 /*康养赵家 climate.html
  ------------------------------------*/

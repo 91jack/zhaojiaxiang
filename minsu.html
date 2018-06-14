@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="static/css/app.css">
 </head>
 <body class="">
+	<div class="mask"></div>
 	<!--搜索-->
 	<div class="top-search clearfix">
 		<div class="container">
@@ -39,7 +40,10 @@
 			</li>
 		</ul>
 		
+		
+	
 		<div class="filter-condition">
+			
 			<ul class="filter-condition-item">
 				<li data-value="0" data-type="酒店类型" class="active">全部</li>
 				<li data-value="1">乡村酒店</li>
@@ -217,6 +221,7 @@
 			var that = $(this).children('span');
 			index = $(this).index(); 
 			$(this).addClass('active').siblings().removeClass('active');
+			$('.mask').show();
 			$('.filter-condition').slideDown('fast');
 			$('.filter-condition-item').eq(index).slideDown('fast').siblings().slideUp('fast');
 			
@@ -228,20 +233,25 @@
 	})
 	
 	$('.filter-condition-item li').each(function(){
-				$(this).bind('click', function(){
-					console.log($(this).attr('data-value'));
-					var selectValue = $(this).attr('data-value');
-					
-					$(this).addClass('active').siblings().removeClass('active');
-					$('.filter-condition').slideUp('fast');
-					if(selectValue>0){
-						$('.filter-btn li').eq(index).children('span').text($(this).text())
-					}else{
-						$('.filter-btn li').eq(index).children('span').text($(this).attr('data-type'))
-					}
-				})
+		$(this).bind('click', function(){
+			console.log($(this).attr('data-value'));
+			var selectValue = $(this).attr('data-value');
 			
-			})
+			$(this).addClass('active').siblings().removeClass('active');
+			$('.filter-condition').slideUp('fast');
+			if(selectValue>0){
+				$('.filter-btn li').eq(index).children('span').text($(this).text())
+			}else{
+				$('.filter-btn li').eq(index).children('span').text($(this).attr('data-type'))
+			}
+			$('.mask').hide();
+		})
+	})
+	
+	$('.mask').bind('click',function(){
+		$(this).hide();
+		$('.filter-condition-item').slideUp('fast');
+	})
 	
 		// 轮播调用
 	$('.top-slider-imgbox').each(function(){
