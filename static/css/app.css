@@ -1,12 +1,8 @@
 /*必看景区 scenic.html
  -------------------------------*/
-.scenic-item-slider {
-	height: 17rem;
-	background: #007AFF;
-}
-
 .scenic-item-info {
 	padding: 1rem 1.5rem;
+	/*background: red;*/
 }
 .scenic-item-intro {
 	color:#999;
@@ -14,12 +10,12 @@
 }
 .scenic-item-status {
 	display: inline-block;
-	width: 4rem;
-	height: 2rem;
-	line-height: 2rem;
+	width: 3.333333rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
 	background: #FFF6EB;
 	color: #FF6A30;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	text-align: center;
 	border-radius: 1rem;
 }
@@ -29,7 +25,7 @@
 	background: #f4f4f4;
 }
 .scenic-item-name {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: bold;
 	color:#333;
 	padding-left: 1rem;
@@ -37,7 +33,9 @@
 
 .scenic-item-content {
 	color: #999;
-	padding: .3rem 0;
+	/*padding: .3rem 0;*/
+	font-size: 1.166666rem;
+	line-height: 2rem;
 }
 .scenic-item-footer {
 	height: 5rem;
@@ -52,6 +50,8 @@
 	float:left;
 	text-align: center;
 	color: #22C41E;
+	font-size: 1rem;
+	font-weight: bold;
 }
 .scenic-item-footer .line {
 	display: block;
@@ -68,6 +68,7 @@
 	margin-right: .6rem;
 	width: 2rem;
 	height: 2rem;
+	vertical-align: middle;
 }
 
 

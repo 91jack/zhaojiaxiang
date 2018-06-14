@@ -2,6 +2,9 @@
 html {
 	font-size: 12px;
 }
+.index-page {
+	/*background: #f4f4f4;*/
+}
 .index-header {
 	width: 100%;
 	height: 3.333333rem;
@@ -43,16 +46,35 @@ html {
 
 /*首页轮播*/
 .index-slider {
-	height: 15.42rem;
-	padding: 0.7rem 0;
+	width: 100%;
+	height: 14.375rem;
+	position: relative;
+	padding: 0.541666rem 0;
 	background:#f1f1f1 ;
 	overflow: hidden;
 }
-.index-slider img {
-	/*display: none;*/
+.top-slider {
+	width: 100%;
+	height: 14.583333rem;
+	position: relative;
+	overflow: hidden;
+
+}
+.top-slider-imgbox {
+	height: 14.583333rem;
+}
+.top-slider-imgbox li {
+	width: 31.25rem;
+	height:14.583333rem;	
+	float:left;
+}
+.top-slider-imgbox li img{
 	width: 100%;
 	height: 100%;
 }
+
+
+
 
 
 /*首页图标导航*/
@@ -60,6 +82,8 @@ html {
 	width: 100%;
 	height: 7.5rem
 	padding: 1rem;
+	background: #fff;
+	
 }
 .index-icon ul li {
 	display: block;
@@ -88,8 +112,9 @@ html {
 	height: 4.166666rem;
 	padding: 0 1rem;
 	overflow: hidden;
-	/*background: red;*/
+	background: #fff;
 	position: relative;
+	border-bottom: 10px solid #f4f4f4;
 }
 .index-slogan h2{
 	float: left;
@@ -149,7 +174,6 @@ html {
 /*首页 农产品*/
 .index-product-list {
 	width: 100%;
-	padding: 1rem 0;
 }
 .index-product-list li {
 	display: block;
