@@ -136,14 +136,22 @@
 	text-align: center;
 }
 .filter-btn li span {
-	margin-right: .5rem;
+	display: inline-block;
+	width: 4.333333rem;
+	text-align: center;
+	/*margin-right: .5rem;*/
+	overflow: hidden;
+	float:left;
 }
 .filter-btn li em {
 	display: inline-block;
+	float: left;
 	width: 0.7rem;
 	height: 0.5rem;
+	margin-top: 1.458333rem;
+	margin-left: 5px;
 	background: url(../images/icon_arrow.png) no-repeat;
-	background-position: center;
+	background-position: center center;
 }
 
 .filter-btn li.active {
