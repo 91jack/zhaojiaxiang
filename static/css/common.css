@@ -89,7 +89,7 @@ input[type="text"] {
 	font-size: 1.166666rem;
 }
 .form .notice {
-	padding: 1rem;
+	padding: 1rem 0; 
 }
 .form  .notice img{
 	display: block;
@@ -99,8 +99,8 @@ input[type="text"] {
 	margin-right: .5rem;
 }
 .form  .notice span{
-	display: block;
-	width: 25.583333rem;
+	display: inline-block;
+	/*width: 26rem;*/
 	float: left;
 	color:#999;
 	font-size: 1.166666rem;
