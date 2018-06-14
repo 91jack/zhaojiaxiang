@@ -111,7 +111,7 @@ html {
 .index-slogan {
 	height: 4.166666rem;
 	padding: 0 1rem;
-	overflow: hidden;
+/*	overflow: hidden;*/
 	background: #fff;
 	position: relative;
 	border-bottom: 10px solid #f4f4f4;
@@ -140,14 +140,15 @@ html {
 	margin: 1.25rem 1rem;
 }
 .index-scroll {
-	height: 4.166666rem;
-/*	background: #007AFF;*/
+	
 	position: absolute;
 	right:1rem;
 	top:0;
+	z-index: 10;
 }
 .index-scroll li {
-	height:  4.166666rem;
+	height: 4.166666rem;
+	background: #00FFFF;
 	line-height:  4.166666rem;
 }
 .index-scroll img {
