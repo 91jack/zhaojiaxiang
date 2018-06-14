@@ -20,29 +20,37 @@
 	
 	<!--首页 banner 轮播-->
 	<div class="index-slider clearfix">
-		<ul class="top-slider-imgbox" id="imgbox">
-			<li>
-				<a href="javascript:;">
-					<img src="static/img/index_banner1.png" alt="" />
-				</a>
-			</li>
-			<li class="active">
-					<a href="javascript:;">
-					<img src="static/img/index_banner2.png" alt="" />
-				</a>
-			</li>
-			<li>
-					<a href="javascript:;">
-					<img src="static/img/index_banner3.png" alt="" />
-				</a>
-			</li>
-			
-			<!--<li>
-					<a href="javascript:;">
-					<img src="static/img/banner1.png" alt="" />
-				</a>
-			</li>-->
-		</ul>
+		<div class="top-slider">
+				<ul class="top-slider-imgbox" id="imgbox">
+					<li>
+						<a href="javascript:;">
+							<img src="static/img/banner1.png" alt="" />
+						</a>
+						<div class="top-slider-item-text">
+							<em class="current-num"></em>/<em class="all-num"></em>
+							<span>黄果树大瀑布1111111</span>
+						</div>
+					</li>
+					<li>
+							<a href="javascript:;">
+								<img src="static/img/banner2.png" alt="" />
+							</a>
+							<div class="top-slider-item-text">
+								<em class="current-num"></em>/<em class="all-num"></em>
+								<span>黄果树大瀑布22222222222</span>
+							</div>
+					</li>
+					<li>
+							<a href="javascript:;">
+								<img src="static/img/banner3.png" alt="" />
+							</a>
+							<div class="top-slider-item-text">
+								<em class="current-num"></em>/<em class="all-num"></em>
+								<span>黄果树大瀑布333333</span>
+							</div>
+					</li>
+				</ul>
+			</div>
 	</div>
 	
 	<!--首页 图标导航-->
@@ -174,8 +182,20 @@
 
 <script src="static/js/jquery-3.1.1.min.js"></script>
 <script src="static/js/common.js"></script>
-<script src="static/js/index.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="static/js/index.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="static/js/slider.js"></script>
 <script type="text/javascript">
+		// 轮播调用
+	$('.top-slider-imgbox').each(function(){
+		var imgbox = $(this)[0];
+		var li = $(this).children('li');
+		var currentNum = $(this).find('.current-num');
+		var allNum = $(this).find('.all-num');
+		//console.log(currentNum,allNum)
+		slider( imgbox, li,currentNum,allNum)
+	})
+	
+	
 	// 气候跳转
 	$('.index-scroll').click(function(){
 		window.location.href="climate.html";

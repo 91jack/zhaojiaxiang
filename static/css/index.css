@@ -167,7 +167,7 @@ html {
 	height: 1.666666rem;
 	float:left;
 	background: #DEDEDE;
-	margin: 1.25rem .5rem;
+	margin: 1.25rem 1rem;
 }
 .index-scroll {
 	
@@ -179,11 +179,9 @@ html {
 .index-scroll li {
 	padding: 0 1rem;
 	height: 4.166666rem;
-	/*background: #00FFFF;*/
 	line-height:  4.166666rem;
 }
 .index-scroll img {
-	/*width: 1rem;*/
 	height: 1.083333rem;
 	margin: 1.541666rem .1rem;
 	
@@ -191,7 +189,6 @@ html {
 .index-scroll span {
 	font-size: 0.916666rem;
 	color:#333;
-	/*line-height: 3rem;*/
 }
 .index-scroll span em {
 	font-style: normal;
