@@ -132,7 +132,7 @@
 	float:left;
 	font-size: 1.083333rem;
 	color:#333;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	text-align: center;
 }
 .filter-btn li span {
