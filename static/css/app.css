@@ -393,7 +393,7 @@
 }
 .yuyue-date {
 	height: 6.666666rem;
-	background: #009CDA;
+	/*background: #009CDA;*/
 	
 }
 
@@ -409,7 +409,7 @@
 	line-height: 2.5rem;
 	font-size: 1.166666rem;
 	color: #585858;
-	/*margin-right: 0.8rem;*/
+	margin-right: 0.8rem;
 }
 .yuyue-week span:last-child,
 .yuyue-day:last-child{
@@ -422,14 +422,15 @@
 	width: 3.333333rem;
 	height: 3.333333rem;
 	float:left;
-	background: #22C41E;
-	border-radius: 50%;
+	
 	text-align: center;
 	color: #585858;
 	margin: 0.416666rem 0;
-	/*margin-right: 0.8rem;*/
+	margin-right: 0.8rem;
 }
 .today {
+	background: #22C41E;
+	border-radius: 50%;
 	color:#fff;
 }
 .yuyue-day span {
