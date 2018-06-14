@@ -89,10 +89,10 @@ input[type="text"] {
 	font-size: 1.166666rem;
 }
 .form .notice {
-	padding: 1rem; 
+	padding: 1rem 0; 
 }
 .form  .notice img{
-	display: block;
+	display: inline-block;
 	width: 1.083333rem;
 	height: 1.416666rem;
 	float: left;
