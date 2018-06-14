@@ -56,11 +56,11 @@
 .scenic-item-footer .line {
 	display: block;
 	width: 1px;
-	height: 3rem;
+	height: 2.5rem;
 	background: #f4f4f4;
 	position: absolute;
 	left: 50%;
-	top: 1rem;
+	top: 0.583333rem;
 	z-index: 10;
 }
 .scenic-item-footer a img {
