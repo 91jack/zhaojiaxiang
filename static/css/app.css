@@ -72,6 +72,114 @@
 }
 
 
+/*赵家民宿 minsu.html
+ ------------------------------------*/
+/*顶部搜索*/
+.top-search {
+	height: 4.666666rem;
+	position: relative;
+	/*background: red;*/
+}
+.top-search input {
+	width: 25rem;
+	height:2.5rem;
+	background: #fafafa;
+	float:left;
+	text-indent: 2.3rem;
+	font-size: 1.083333rem;
+	border: 1px solid #e6e6e6;
+}
+.top-search input::-webkit-input-placeholder {
+	color: #ccc;
+	font-size: 1.083333rem;
+}
+.top-search a {
+	display: block;
+	float:right;
+	width: 3.75rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	color: #fff;
+	background: #22C41E;
+	text-align: center;
+	border-radius: 4px;
+}
+.top-search img {
+	position: absolute;
+	left: 2rem;
+	top:1.8rem;
+}
+
+/*筛选条件*/
+.filter {
+	position: relative;
+	/*overflow: hidden;*/
+}
+.filter-btn {
+	/*width: 100%;*/
+	height: 3.333333rem;
+	/*background: #00FFFF;*/
+	padding: 0 1rem;
+}
+.filter-btn li{
+	width: 25%;
+	height: 3.333333rem;
+	line-height: 3.333333rem;
+	float:left;
+	font-size: 1.083333rem;
+	color:#333;
+	font-weight: bold;
+}
+.filter-btn li span {
+	margin-right: .5rem;
+}
+.filter-btn li em {
+	display: inline-block;
+	width: 0.7rem;
+	height: 0.5rem;
+	background: url(../images/icon_arrow.png) no-repeat;
+	background-position: center;
+}
+
+.filter-btn li.active {
+	color: #22C41E;
+}
+.filter-btn li.active em{
+	display: inline-block;
+	width: 1.2rem;
+	height: 0.5rem;
+	background: url(../images/icon_up.png) no-repeat;
+}
+
+.filter-condition {
+	width: 100%;
+	position: absolute;
+	top:3.333333rem;
+	left:0;
+	z-index: 10;
+	background: #fff;
+}
+.filter-condition-item {
+	display: none;
+}
+.filter-condition-item li {
+	padding-left: 1.3rem;
+	height:3.583333rem;
+	line-height: 3.583333rem;
+	font-size: 1.083333rem;
+	border-bottom: 1px solid #f1f1f1;
+	color:#333;
+}
+.filter-condition-item li:first-child {
+	border-left: .3rem solid #22C41E;
+	padding-left: 1rem;
+	color: #22C41E;
+}
+
+
+
+
+
 
 /*康养赵家 climate.html
  ------------------------------------*/
@@ -232,13 +340,7 @@
 	background: #009CDA;
 	
 }
-/*.yuyue-date li {
-	float: left;
-	margin-right: 1rem;
-}
-.yuyue-date li:last-child {
-	padding-right: 0;
-}*/
+
 .yuyue-week {
 	border-bottom: 1px solid #e6e6e6;
 	padding: 0 1rem;

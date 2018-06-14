@@ -48,26 +48,39 @@ html {
 .index-slider {
 	width: 100%;
 	height: 14.375rem;
-	position: relative;
+	
 	padding: 0.541666rem 0;
 	background:#f1f1f1 ;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	position: relative;
 }
-.top-slider {
-	width: 100%;
+/*.top-slider {
+	width: 400%;
 	height: 14.583333rem;
 	position: relative;
-	overflow: hidden;
+	
 
-}
+}*/
 .top-slider-imgbox {
+	/*width: 400%;*/
 	height: 14.583333rem;
 }
 .top-slider-imgbox li {
-	width: 31.25rem;
+	width: 80%;
 	height:14.583333rem;	
 	float:left;
+	/*transform: scale(.8);*/
+	
 }
+
+.top-slider-imgbox li.active
+.top-slider-imgbox li.active {
+	position:absolute;
+	left:0;
+	right:0;
+} 
+
+
 .top-slider-imgbox li img{
 	width: 100%;
 	height: 100%;
