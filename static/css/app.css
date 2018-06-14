@@ -82,8 +82,9 @@
 }
 .top-search input {
 	width: 25rem;
-	height:2.5rem;
-	line-height: 2.5rem;
+	height:1.5rem;
+	line-height: 1.5rem;
+	padding: .5rem 0;
 	background: #fafafa;
 	float:left;
 	text-indent: 2.5rem;
