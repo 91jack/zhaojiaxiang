@@ -48,64 +48,23 @@ html {
 .index-slider {
 	width: 100%;
 	height: 14.375rem;
-	
 	padding: 0.541666rem 0;
 	background:#f1f1f1 ;
 	overflow: hidden;
 	position: relative;
 }
-/*.top-slider-imgbox {
-	height: 14.583333rem;
+.index-slider img {
+	transform: scale(0.8);
+	border-radius: 0.5rem;
 }
-.top-slider-imgbox li {
-	width: 31.25rem;
-	height:14.583333rem;	
-	float:left;
-	position: relative;
-}
-.top-slider-imgbox li img{
-	width: 100%;
-	height: 100%;
-}
-.top-slider-num {
-	display: block;
-	width: 3rem;
-	height: 1rem;
-	padding: .3rem;
-	background: rgba(0,0,0,.5);
+.index-slider li:first-child {
 	position: absolute;
-	bottom: 0.625rem;
-	left:1rem;
-	z-index: 10;
-	text-align: center;
-	font-size: 0.833333rem;
-	line-height: 1rem;
-	color:#fff;
-	border-radius: 1rem;
-
-} 
-.top-slider-num span em{
-	margin: 0 3px;
+	left: -31.25rem;
 }
 
-.top-slider-item-text {
-	width: 100%;
-	display: block;
-	height:2.5rem;
-	line-height: 2.5rem;
-	font-size: 1.166666rem;
-	text-indent: 2rem;
-	color: #fff;
-	position: absolute;
-	left:0;
-	bottom:0;
-	background: rgba(0,0,0,.3);
-	z-index: 10;
+.index-slider li:nth-child(2) {
+	transform: scale(0.8);
 }
-.top-slider-item-text span {
-	margin: 0 1rem;	
-}*/
-
 
 /*首页图标导航*/
 .index-icon {
@@ -175,6 +134,8 @@ html {
 	right:.5rem;
 	top:0;
 	z-index: 10;
+	transition: all 1s;
+	
 }
 .index-scroll li {
 	padding: 0 1rem;
