@@ -562,6 +562,23 @@
 	border-radius: 0.5rem;
 	margin: 1rem auto;
 }
+/*.yuyue-notice {
+	background: red;
+}*/
+.yuyue-notice img{
+	display: block;
+	width: 1.083333rem;
+	height:1.416666rem;
+	float: left;
+	padding: 0 .3rem;
+}
+.yuyue-notice span{
+	display: block;
+	width: 90%;
+	float: left;
+	/*line-height: 2.5rem;*/
+}
+
 .yuyue-btn:active,
 .yuyue-btn:focus {
 	color:#fff;
