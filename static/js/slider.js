@@ -1,6 +1,6 @@
 // 顶部手动轮播图1
 var width = document.documentElement.clientWidth;
-var imgNum = $('.top-slider-imgbox li').length;
+var imgNum = $('.top-slider-imgbox>li').length;
 $('.all-num').text(imgNum)
 var index = 1;
 var imgBox = document.getElementById("imgbox")

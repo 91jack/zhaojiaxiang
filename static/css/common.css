@@ -137,6 +137,7 @@ input[type="text"] {
 	width: 31.25rem;
 	height:14.583333rem;	
 	float:left;
+	position: relative;
 }
 .top-slider-imgbox li img{
 	width: 100%;
@@ -162,6 +163,26 @@ input[type="text"] {
 .top-slider-num span em{
 	margin: 0 3px;
 }
+
+.top-slider-item-text {
+	width: 100%;
+	display: block;
+	height:2.5rem;
+	line-height: 2.5rem;
+	font-size: 1.166666rem;
+	/*padding: 0 2rem;*/
+	text-indent: 2rem;
+	color: #fff;
+	position: absolute;
+	left:0;
+	bottom:0;
+	background: rgba(0,0,0,.3);
+	z-index: 10;
+}
+.top-slider-item-text span {
+	margin: 0 1rem;	
+}
+
 /*去这里*/
 .goon {
 	position: absolute;
