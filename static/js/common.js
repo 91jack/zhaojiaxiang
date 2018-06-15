@@ -2,7 +2,7 @@
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
 	var deviceWidth = document.documentElement.clientWidth;
-	console.log(deviceWidth)
+	//console.log(deviceWidth)
 	
 		document.documentElement.style.fontSize = deviceWidth / 31.25 + 'px';
 		
