@@ -53,37 +53,23 @@ html {
 	overflow: hidden;
 	position: relative;
 }
-.index-slider .index-slider-imgbox {
+
+.index-slider-imgbox {
+	
+	height: 14.583333rem;
+	position: relative;
+	overflow: hidden;
+}
+.index-slider-imgbox li {
+	width: 31.25rem;
+	height:14.583333rem;	
+	float:left;
 	position: relative;
 }
-.index-slider .index-slider-imgbox li {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	overflow: hidden;
-	/*left: 480px;*/
+.index-slider-imgbox li img{
+	width: 100%;
+	height: 100%;
 }
-.index-slider .index-slider-imgbox {
-	width: 28.75rem;
-	height: 14.375rem;
-	margin: 0 auto;
-}
-.index-slider .index-slider-imgbox img {
-	width: 28.75rem;
-	height: 14.375rem;
-	
-	/*transform: scale(0.8);*/
-	border-radius: 1rem;
-}
-/*.index-slider li:first-child {
-	position: absolute;
-	left: -31.25rem;
-}
-
-.index-slider li:nth-child(2) {
-	transform: scale(0.8);
-}*/
 
 /*首页图标导航*/
 .index-icon {

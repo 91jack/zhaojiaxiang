@@ -42,11 +42,11 @@ function slider( imgbox, li){
 		// 无缝滑动（定时器、过渡、位移）
 		else if(index < 0) {
 			index = imgNum-1;
-			console.log(index)
+			//console.log(index)
 			removeTransition();
 			setTranlateX(-index * width);
 		}
-		console.log(index)
+		//console.log(index)
 		//$(currentNum).text(index + 1)
 	
 	})
@@ -77,7 +77,7 @@ function slider( imgbox, li){
 	
 	// 手指离开屏幕的时候触发
 	imgbox.addEventListener("touchend", function(e) {
-		console.log(distanceX);
+		//console.log(distanceX);
 		// 滑动事件结束以后来判断当前滑动距离
 		// 有一个范围，如果滑动的范围大于三分之一则切换图片，如果小于三分之一则定位回去
 		if(ismove) {

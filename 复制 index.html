@@ -33,9 +33,10 @@
 					</a>
 					
 			</li>
-			<li>
+
+				<li>
 					<a href="javascript:;">
-						<img src="static/img/banner3.png" alt="" />
+						<img src="static/img/index_banner1.png" alt="" />
 					</a>
 			</li>
 		</ul>
@@ -174,14 +175,14 @@
 <script src="static/js/index.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 		// 轮播调用
-
-		var imgbox = $('.index-slider-imgbox')[0];
-		var li =$('.index-slider-imgbox').children('li');
+	$('.top-slider-imgbox').each(function(){
+		var imgbox = $(this)[0];
+		var li = $(this).children('li');
 		//var currentNum = $(this).find('.current-num');
 		//var allNum = $(this).find('.all-num');
 		//console.log(currentNum,allNum)
 		slider( imgbox, li)
-
+	})
 	
 	
 	// 气候跳转
@@ -201,7 +202,41 @@
 	},3000)
 	
 	
+	//
+	var $imgs = $('.index-slider-imgbox li');
+	//$imgs.eq(0).css('left',0)
+	var con = null;
+	config = {
+					interval: con && con.interval || 3500,
+					animateTime: con && con.animateTime || 500,
+					direction: con && (con.direction === 'right'),
+					_imgLen: $imgs.length
+				},
+				i = 0,
+				getNextIndex = function(y) {
+					return i + y >= config._imgLen ? i + y - config._imgLen : i + y;
+				},
+				getPrevIndex = function(y) {
+					return i - y < 0 ? config._imgLen + i - y : i - y;
+				},
+				silde = function(d) {
+					var deviceWidth = document.documentElement.clientWidth;
+					$imgs.eq((d ? getPrevIndex(2) : getNextIndex(2))).css('left', (d ? '-29rem' : '29rem'))
+					$imgs.animate({
+						'left': (d ? '+' : '-') + '=29rem'
+					}, config.animateTime);
+					i = d ? getPrevIndex(1) : getNextIndex(1);
 
+					//console.log(i)
+					//$imgs.eq(i).css('transform', 'scale(1)').siblings().css('transform', 'scale(.9)')
+				},
+				s = setInterval(function() {
+					silde(config.direction);
+				}, config.interval);
+			
+				//$imgs.eq(i).css('transform', 'scale(1)')
+				console.log(i)
+				$imgs.eq(i).css('left', 0).end().eq(i + 1).css('left', '29rem').end().eq(i - 1).css('left', '-29rem');
 </script>
 </body>
 </html>
