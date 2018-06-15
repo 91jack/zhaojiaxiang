@@ -70,9 +70,12 @@ body {
 * html, * html body { background-image: url(about:blank); background-attachment: fixed; zoom: 1; }*/
 
 #main {
+	width: 300px;
+	height: 102.5px;
 	overflow: hidden;
 	zoom: 1;
 	position: relative;
+	margin: 100px auto;
 }
 
 #index_b_hero {
