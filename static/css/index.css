@@ -53,7 +53,7 @@ html {
 	overflow: hidden;
 	position: relative;
 }
-.index-slider img {
+/*.index-slider img {
 	transform: scale(0.8);
 	border-radius: 0.5rem;
 }
@@ -64,7 +64,7 @@ html {
 
 .index-slider li:nth-child(2) {
 	transform: scale(0.8);
-}
+}*/
 
 /*首页图标导航*/
 .index-icon {

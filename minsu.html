@@ -217,18 +217,20 @@
 	// 筛选条件
 	var index = 0;
 	$('.filter-btn li').each(function(){
+		var on = true;
 		$(this).on('click',function(){
 			var that = $(this).children('span');
 			index = $(this).index(); 
 			$(this).addClass('active').siblings().removeClass('active');
-			$('.mask').show();
-			$('.filter-condition').slideDown('fast');
-			$('.filter-condition-item').eq(index).slideDown('fast').siblings().slideUp('fast');
-			
-			
-			
-			
-			
+			if(on){
+				$('.mask').show();
+				$('.filter-condition').slideDown('fast');
+				$('.filter-condition-item').eq(index).slideDown('fast').siblings().slideUp('fast');
+			}else{
+				$('.mask').hide();
+				$('.filter-condition').slideUp('fast');
+			}
+			on = !on;
 		});
 	})
 	
