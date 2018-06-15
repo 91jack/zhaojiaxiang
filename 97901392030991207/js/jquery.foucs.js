@@ -20,9 +20,9 @@
 					return i - y < 0 ? config._imgLen + i - y : i - y;
 				},
 				silde = function(d) {
-					$imgs.eq((d ? getPrevIndex(2) : getNextIndex(2))).css('left', (d ? '-1920px' : '1920px'))
+					$imgs.eq((d ? getPrevIndex(2) : getNextIndex(2))).css('left', (d ? '-480px' : '480px'))
 					$imgs.animate({
-						'left': (d ? '+' : '-') + '=960px'
+						'left': (d ? '+' : '-') + '=240px'
 					}, config.animateTime);
 					i = d ? getPrevIndex(1) : getNextIndex(1);
 
@@ -34,7 +34,7 @@
 				}, config.interval);
 			
 				$imgs.eq(i).css('transform', 'scale(1)')
-			$imgs.eq(i).css('left', 0).end().eq(i + 1).css('left', '960px').end().eq(i - 1).css('left', '-960px');
+			$imgs.eq(i).css('left', 0).end().eq(i + 1).css('left', '240px').end().eq(i - 1).css('left', '-240px');
 			
 			$container.find('.hero-wrap').add($leftBtn).add($rightBtn).hover(function() {
 				clearInterval(s);

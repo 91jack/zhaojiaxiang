@@ -439,6 +439,7 @@
 .yuyue-day span {
 	display: block;
 	font-size: 1.083333rem;
+	line-height:1.083333rem;
 }
 .yuyue-day em {
 	display: block;
