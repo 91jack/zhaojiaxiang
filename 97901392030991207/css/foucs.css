@@ -104,8 +104,8 @@ body {
 	transform: scale(0.9);
 }
 
-#index_b_hero .mask-left,
-#index_b_hero .mask-right,
+/*#index_b_hero .mask-left,
+#index_b_hero .mask-right,*/
 #index_b_hero .hero {
 	background: #fff;
 	padding: 5px;

@@ -36,24 +36,24 @@
 				$imgs.eq(i).css('transform', 'scale(1)')
 			$imgs.eq(i).css('left', 0).end().eq(i + 1).css('left', '240px').end().eq(i - 1).css('left', '-240px');
 			
-			$container.find('.hero-wrap').add($leftBtn).add($rightBtn).hover(function() {
-				clearInterval(s);
-			}, function() {
-				s = setInterval(function() {
-					silde(config.direction);
-				}, config.interval);
-			});
+//			$container.find('.hero-wrap').add($leftBtn).add($rightBtn).hover(function() {
+//				clearInterval(s);
+//			}, function() {
+//				s = setInterval(function() {
+//					silde(config.direction);
+//				}, config.interval);
+//			});
 			
-			$leftBtn.click(function() {
-				if($(':animated').length === 0) {
-					silde(false);
-				}
-			});
-			$rightBtn.click(function() {
-				if($(':animated').length === 0) {
-					silde(true);
-				}
-			});
+//			$leftBtn.click(function() {
+//				if($(':animated').length === 0) {
+//					silde(false);
+//				}
+//			});
+//			$rightBtn.click(function() {
+//				if($(':animated').length === 0) {
+//					silde(true);
+//				}
+//			});
 		}
 	});
 }(jQuery));

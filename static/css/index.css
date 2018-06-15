@@ -53,11 +53,30 @@ html {
 	overflow: hidden;
 	position: relative;
 }
-/*.index-slider img {
-	transform: scale(0.8);
-	border-radius: 0.5rem;
+.index-slider .index-slider-imgbox {
+	position: relative;
 }
-.index-slider li:first-child {
+.index-slider .index-slider-imgbox li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow: hidden;
+	/*left: 480px;*/
+}
+.index-slider .index-slider-imgbox {
+	width: 28.75rem;
+	height: 14.375rem;
+	margin: 0 auto;
+}
+.index-slider .index-slider-imgbox img {
+	width: 28.75rem;
+	height: 14.375rem;
+	
+	/*transform: scale(0.8);*/
+	border-radius: 1rem;
+}
+/*.index-slider li:first-child {
 	position: absolute;
 	left: -31.25rem;
 }

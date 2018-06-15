@@ -20,27 +20,32 @@
 	
 	<!--首页 banner 轮播-->
 	<div class="index-slider clearfix">
-		<div class="top-slider">
-				<ul class="top-slider-imgbox" id="imgbox">
-					<li>
-						<a href="javascript:;">
-							<img src="static/img/banner1.png" alt="" />
-						</a>
+		<ul class="index-slider-imgbox" >
+			<li>
+				<a href="javascript:;">
+					<img src="static/img/banner1.png" alt="" />
+				</a>
+			
+			</li>
+			<li>
+					<a href="javascript:;">
+						<img src="static/img/banner2.png" alt="" />
+					</a>
 					
-					</li>
-					<li>
-							<a href="javascript:;">
-								<img src="static/img/banner2.png" alt="" />
-							</a>
-							
-					</li>
-					<li>
-							<a href="javascript:;">
-								<img src="static/img/banner3.png" alt="" />
-							</a>
-					</li>
-				</ul>
-			</div>
+			</li>
+			
+			<li>
+					<a href="javascript:;">
+						<img src="static/img/index_banner1.png" alt="" />
+					</a>
+			</li>
+			
+			<li>
+					<a href="javascript:;">
+						<img src="static/img/index_banner1.png" alt="" />
+					</a>
+			</li>
+		</ul>
 	</div>
 	
 	<!--首页 图标导航-->
@@ -202,6 +207,47 @@
 		}
 	},3000)
 	
+	
+	//
+	var $imgs = $('.index-slider-imgbox li');
+	//$imgs.eq(0).css('left',0)
+	var con = null;
+	config = {
+					interval: con && con.interval || 3500,
+					animateTime: con && con.animateTime || 500,
+					direction: con && (con.direction === 'right'),
+					_imgLen: $imgs.length-1
+				},
+				i = 0,
+				getNextIndex = function(y) {
+					console.log(y)
+					return i + y >= config._imgLen ? i + y - config._imgLen : i + y;
+				},
+				getPrevIndex = function(y) {
+					console.log(y)
+					return i - y < 0 ? config._imgLen + i - y : i - y;
+				},
+				silde = function(d) {
+//					var deviceWidth = document.documentElement.clientWidth;
+//					$imgs.eq((d ? getPrevIndex(2) : getNextIndex(2))).css('left', (d ? '-29rem' : '29rem'))
+//					$imgs.animate({
+//						'left': (d ? '+' : '-') + '=29rem'
+//					}, config.animateTime);
+//					i = d ? getPrevIndex(1) : getNextIndex(1);
+						$imgs.eq(i).css('left', 0).end().eq(i + 1).css('left', '29rem').end().eq(i - 1).css('left', '-29rem');
+				$('.index-slider-imgbox').animate({
+						'left': '-29rem'
+					}, config.animateTime);
+					//console.log(i)
+					//$imgs.eq(i).css('transform', 'scale(1)').siblings().css('transform', 'scale(.9)')
+				},
+				s = setInterval(function() {
+					silde(config.direction);
+				}, config.interval);
+			
+				//$imgs.eq(i).css('transform', 'scale(1)')
+				console.log(i)
+				$imgs.eq(i).css('left', 0).end().eq(i + 1).css('left', '29rem').end().eq(i - 1).css('left', '-29rem').eq(i + 2).css('left', '58rem');
 </script>
 </body>
 </html>
