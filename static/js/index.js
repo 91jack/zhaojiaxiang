@@ -1,14 +1,18 @@
 function slider( imgbox, li){
+	
 	// 顶部手动轮播图1
-	var width = document.documentElement.clientWidth;
+	var w = document.documentElement.clientWidth;
+//	var width = width-33;
 	var imgNum = $(li).length;
 
 	//$(allNum).text(imgNum)
 	//var index = 1;
 
-	$(imgbox).css('width', width * imgNum + 'px');
+	//$(imgbox).css('width', width * imgNum + 'px');
 	//$(li).css('width', width + 'px');
-	
+	var width = $('.index-slider-imgbox li').css('width');
+		width = parseInt(width)-5;
+	$('.index-slider-imgbox').css('width',w * imgNum +'px')
 	// 提取公用方法
 	var addTransition = function() {
 		// 增加过渡
@@ -32,20 +36,33 @@ function slider( imgbox, li){
 	// 怎么监听过渡截止的时间 过渡结束S事件
 	imgbox.addEventListener('transitionend', function() {
 		// 无缝滚动
-		if(index >= imgNum) {
-			// 瞬间定位到第一张
-			index = 0;
-			// 先清除过渡，然后在根据index定位
+		console.log(index)
+		if(index == 1){
 			removeTransition();
-			setTranlateX(-index * width);
-		}
-		// 无缝滑动（定时器、过渡、位移）
-		else if(index < 0) {
-			index = imgNum-1;
-			//console.log(index)
+			setTranlateX(-340);
+		}else if(index == 2){
 			removeTransition();
-			setTranlateX(-index * width);
+			setTranlateX(-693);
+		}else if(index == 3){
+			removeTransition();
+			setTranlateX(-1045);
 		}
+		
+		
+//		if(index >= imgNum) {
+//			// 瞬间定位到第一张
+//			index = 0;
+//			// 先清除过渡，然后在根据index定位
+//			removeTransition();
+//			setTranlateX(-index * width);
+//		}
+//		// 无缝滑动（定时器、过渡、位移）
+//		else if(index < 0) {
+//			index = imgNum-1;
+//			//console.log(index)
+//			removeTransition();
+//			setTranlateX(-index * width);
+//		}
 		//console.log(index)
 		//$(currentNum).text(index + 1)
 	
