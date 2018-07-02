@@ -7,63 +7,42 @@
   <title>白马之乡</title>
   <link rel="stylesheet" type="text/css" href="static/css/common.css"/>
   <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/swiper-4.3.3.min.css"/>
 	<style type="text/css">
-		/*首页轮播*/
-	.index-slider {
-	/*	width: 145.25rem;*/
-	/*	transform: translateX(-28.75rem);*/
-	}
-
-	.index-slider-imgbox li {
-	width: 28.75rem;
-	margin-right: 0.3rem;
-	height:14.583333rem;	
-	float:left;
-	position: relative;
-	overflow: hidden;
-}
-.index-slider-imgbox li img{
-	width: 100%;
-	height: 100%;
-}
-button {
-	display: inline-block;
-	width: 4.166666rem;
-	height: 2.083333rem;
-}
-button:first-child {
-	float:left;
-}
-button:last-child {
-	float:right;
-}
-/*.index-slider {
-	width: 100%;
-	height: 14.375rem;
-	padding: 0.541666rem 0;
-	background:#f1f1f1 ;
-	overflow: hidden;
-	position: relative;
-}
-
-.index-slider-imgbox {
-	height: 14.583333rem;
-	position: relative;
-	overflow: hidden;
-	transform: translateX(-28.50rem);
-}
-.index-slider-imgbox li {
-	width: 28.75rem;
-	margin: 0 0.3rem;
-	height:14.583333rem;	
-	float:left;
-	position: relative;
-	overflow: hidden;
-}
-.index-slider-imgbox li img{
-	width: 100%;
-	height: 100%;
-}*/
+		.swiper-container {
+			width: 100%;
+		/*	width: 28.75rem;*/
+			height: 14.375rem;
+			padding: 0.541666rem 0;
+			background:#f1f1f1 ;
+			overflow: hidden;
+			position: relative;
+		}
+		/*.swiper-wrapper{
+			width: 100%;
+			height: 14.583333rem;
+			position: relative;
+			overflow: hidden;
+		}*/
+		.swiper-slide {
+			/*width: 28.75rem;*/
+			height:14.583333rem;	
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.swiper-slide img {
+			/*width: 100%;
+			height: 100%;*/
+		
+		}
+		.swiper-slide-active {
+			width: 28.75rem!important;
+		}
+		.swiper-slide-prev,
+		.swiper-slide-next {
+			width: 1rem!important;
+			transform: scale(0.9);
+		}
 	</style>
 </head>
 <body class="index-page">
@@ -76,33 +55,24 @@ button:last-child {
 	</div>
 	
 	<!--首页 banner 轮播-->
-	<div class="index-slider clearfix">
-		<ul class="index-slider-imgbox" >
-				
-			<li>
-				<a href="javascript:;">
-					<img src="static/img/banner1.png" alt="" />
-				</a>
-			</li>
-			<li>
-					<a href="javascript:;">
-						<img src="static/img/banner2.png" alt="" />
-					</a>
-					
-			</li>
-			<li>
-					<a href="javascript:;">
-						<img src="static/img/banner3.png" alt="" />
-					</a>
-			</li>
-			
-		
-		</ul>
-	</div>
-	<div class="btnbox clearfix">
-		<button id="prev">←</button>
-		<button id="next">→</button>
-	</div>
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+        	<a href=""><img src="static/img/banner1.png"/></a>
+        </div>
+        <div class="swiper-slide">
+        	<a href=""><img src="static/img/banner2.png"/></a>
+        </div>
+        <div class="swiper-slide">
+        	<a href=""><img src="static/img/banner3.png"/></a>
+        </div>
+    </div>
+    
+    <!-- 如果需要导航按钮 -->
+    <!--<div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>-->
+</div>
+	
 	
 	
 	<!--首页 图标导航-->
@@ -235,51 +205,27 @@ button:last-child {
 
 <script src="static/js/jquery-3.1.1.min.js"></script>
 <script src="static/js/common.js"></script>
+<script src="static/js/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-	$(function(){
-		
 		// 轮播调用
-			var liFirst = $('.index-slider-imgbox li:first-child').clone();
-			var liLast = $('.index-slider-imgbox li:last-child').clone();
-		
-			var imgBox = $('.index-slider-imgbox');
-			console.log(liFirst)
-			// 将第一张追加在最后
-			imgBox.append(liFirst);
-			// 将最后一张追加在最前
-			imgBox.prepend(liLast);
-			
-			
-			var w = document.documentElement.clientWidth;
-			
-			var liNum = $('.index-slider-imgbox li').length;
-			imgBox.css('width',liNum * w + 'px');
-		
-			var liWidth = $('.index-slider-imgbox li').width();
-			var mrWidth = $('.index-slider-imgbox li').css('margin-right');
-			var halfWidth = w - liWidth - parseFloat(mrWidth)*2; 
-			var translateX = liWidth -halfWidth/2;
-			console.log(w)
-			console.log(liWidth)
-			console.log(mrWidth)
-			console.log(halfWidth)
-			console.log(translateX)
-			imgBox.css('transform', "translateX(" + -translateX + "px)")
-			
-			var index = 1;
-			$('#next').click(function(){
-				index++;
-				var translateX =  index * (liWidth - parseFloat(mrWidth));
-				console.log(translateX)
-				imgBox.css('transform', "translateX(" + -translateX + "px)")
-			})
-			
-			//imgBox.style.transform = "translateX(" + translateX + "px)";
+//
 //		var imgbox = $('.index-slider-imgbox')[0];
 //		var li =$('.index-slider-imgbox').children('li');
 //		slider( imgbox, li)
-	})
+ var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    slidesPerView: '3',
+    loopedSlides: 3,
+    centeredSlides : true,
+    spaceBetween : 5,
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
 
+  })        
 	
 	
 	// 气候跳转
