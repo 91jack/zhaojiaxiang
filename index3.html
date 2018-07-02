@@ -7,7 +7,53 @@
   <title>白马之乡</title>
   <link rel="stylesheet" type="text/css" href="static/css/common.css"/>
   <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
-	
+	<style type="text/css">
+		/*首页轮播*/
+	.index-slider {
+		width: 145.25rem;
+	/*	transform: translateX(-28.75rem);*/
+	}
+
+	.index-slider-imgbox li {
+	width: 28.75rem;
+	margin-right: 0.3rem;
+	height:14.583333rem;	
+	float:left;
+	position: relative;
+	overflow: hidden;
+}
+.index-slider-imgbox li img{
+	width: 100%;
+	height: 100%;
+}
+/*.index-slider {
+	width: 100%;
+	height: 14.375rem;
+	padding: 0.541666rem 0;
+	background:#f1f1f1 ;
+	overflow: hidden;
+	position: relative;
+}
+
+.index-slider-imgbox {
+	height: 14.583333rem;
+	position: relative;
+	overflow: hidden;
+	transform: translateX(-28.50rem);
+}
+.index-slider-imgbox li {
+	width: 28.75rem;
+	margin: 0 0.3rem;
+	height:14.583333rem;	
+	float:left;
+	position: relative;
+	overflow: hidden;
+}
+.index-slider-imgbox li img{
+	width: 100%;
+	height: 100%;
+}*/
+	</style>
 </head>
 <body class="index-page">
 	<!--首页顶部切换-->
@@ -21,16 +67,11 @@
 	<!--首页 banner 轮播-->
 	<div class="index-slider clearfix">
 		<ul class="index-slider-imgbox" >
-				<li>
-					<a href="javascript:;">
-						<img src="static/img/banner3.png" alt="" />
-					</a>
-			</li>
+				
 			<li>
 				<a href="javascript:;">
 					<img src="static/img/banner1.png" alt="" />
 				</a>
-			
 			</li>
 			<li>
 					<a href="javascript:;">
@@ -44,14 +85,11 @@
 					</a>
 			</li>
 			
-				<li>
-				<a href="javascript:;">
-					<img src="static/img/banner1.png" alt="" />
-				</a>
-			
-			</li>
+		
 		</ul>
 	</div>
+	<button>←</button>
+	<button>→</button>
 	
 	<!--首页 图标导航-->
 	<div class="index-icon clearfix">
@@ -183,13 +221,32 @@
 
 <script src="static/js/jquery-3.1.1.min.js"></script>
 <script src="static/js/common.js"></script>
-<script src="static/js/index.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 		// 轮播调用
-
-		var imgbox = $('.index-slider-imgbox')[0];
-		var li =$('.index-slider-imgbox').children('li');
-		slider( imgbox, li)
+			var liFirst = $('.index-slider-imgbox li:first-child').clone();
+			var liLast = $('.index-slider-imgbox li:last-child').clone();
+			var imgBox = $('.index-slider-imgbox');
+			console.log(liFirst)
+			// 将第一张追加在最后
+			imgBox.append(liFirst);
+			// 将最后一张追加在最前
+			imgBox.prepend(liLast);
+			
+			var w = document.documentElement.clientWidth;
+			var liWidth = $('.index-slider-imgbox li').width();
+			var mrWidth = $('.index-slider-imgbox li').css('margin-right');
+			var halfWidth = w - liWidth - parseFloat(mrWidth); 
+			var translateX = liWidth - halfWidth / 2 ;
+			console.log(w)
+			console.log(liWidth)
+			console.log(mrWidth)
+			console.log(halfWidth)
+			console.log(translateX)
+			imgBox.css('transform', "translateX(" + -translateX + "px)")
+			//imgBox.style.transform = "translateX(" + translateX + "px)";
+//		var imgbox = $('.index-slider-imgbox')[0];
+//		var li =$('.index-slider-imgbox').children('li');
+//		slider( imgbox, li)
 
 	
 	
