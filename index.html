@@ -7,7 +7,33 @@
   <title>白马之乡</title>
   <link rel="stylesheet" type="text/css" href="static/css/common.css"/>
   <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
-	
+	<link rel="stylesheet" type="text/css" href="static/css/swiper-4.3.3.min.css"/>
+	<style type="text/css">
+		.swiper-container {
+			width: 100%;
+		/*	width: 28.75rem;*/
+			height: 14.375rem;
+			padding: 0.541666rem 0;
+			background:#f1f1f1 ;
+			overflow: hidden;
+			position: relative;
+		}
+		.swiper-slide {
+			/*width: 28.75rem;*/
+			height:14.583333rem;	
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.swiper-slide-active {
+			width: 28.75rem!important;
+		}
+		.swiper-slide-prev,
+		.swiper-slide-next {
+			width: 1rem!important;
+			transform: scale(0.9)!important;
+			-webkit-transform:scale(0.9)!important;
+		}
+	</style>
 </head>
 <body class="index-page">
 	<!--首页顶部切换-->
@@ -19,27 +45,25 @@
 	</div>
 	
 	<!--首页 banner 轮播-->
-	<div class="index-slider clearfix">
-		<ul class="index-slider-imgbox" >
-			<li>
-				<a href="javascript:;">
-					<img src="static/img/banner1.png" alt="" />
-				</a>
-			
-			</li>
-			<li>
-					<a href="javascript:;">
-						<img src="static/img/banner2.png" alt="" />
-					</a>
-					
-			</li>
-			<li>
-					<a href="javascript:;">
-						<img src="static/img/banner3.png" alt="" />
-					</a>
-			</li>
-		</ul>
-	</div>
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+        	<a href=""><img src="static/img/banner1.png"/></a>
+        </div>
+        <div class="swiper-slide">
+        	<a href=""><img src="static/img/banner2.png"/></a>
+        </div>
+        <div class="swiper-slide">
+        	<a href=""><img src="static/img/banner3.png"/></a>
+        </div>
+    </div>
+    
+    <!-- 如果需要导航按钮 -->
+    <!--<div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>-->
+</div>
+	
+	
 	
 	<!--首页 图标导航-->
 	<div class="index-icon clearfix">
@@ -171,14 +195,17 @@
 
 <script src="static/js/jquery-3.1.1.min.js"></script>
 <script src="static/js/common.js"></script>
-<script src="static/js/index.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/js/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-		// 轮播调用
-
-		var imgbox = $('.index-slider-imgbox')[0];
-		var li =$('.index-slider-imgbox').children('li');
-		slider( imgbox, li)
-
+		// 轮播
+ var mySwiper = new Swiper ('.swiper-container', {
+ 		autoplay:true,
+    loop: true,
+    slidesPerView: '3',
+    loopedSlides: 3,
+    centeredSlides : true,
+    spaceBetween : 5,
+  })        
 	
 	
 	// 气候跳转
