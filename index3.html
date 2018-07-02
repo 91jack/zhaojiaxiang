@@ -26,6 +26,17 @@
 	width: 100%;
 	height: 100%;
 }
+button {
+	display: inline-block;
+	width: 4.166666rem;
+	height: 2.083333rem;
+}
+button:first-child {
+	float:left;
+}
+button:last-child {
+	float:right;
+}
 /*.index-slider {
 	width: 100%;
 	height: 14.375rem;
@@ -88,8 +99,11 @@
 		
 		</ul>
 	</div>
-	<button>←</button>
-	<button>→</button>
+	<div class="btnbox clearfix">
+		<button id="prev">←</button>
+		<button id="next">→</button>
+	</div>
+	
 	
 	<!--首页 图标导航-->
 	<div class="index-icon clearfix">
@@ -251,6 +265,15 @@
 			console.log(halfWidth)
 			console.log(translateX)
 			imgBox.css('transform', "translateX(" + -translateX + "px)")
+			
+			var index = 1;
+			$('#next').click(function(){
+				index++;
+				var translateX = index * (liWidth - parseFloat(mrWidth));
+				console.log(translateX)
+				imgBox.css('transform', "translateX(" + -translateX + "px)")
+			})
+			
 			//imgBox.style.transform = "translateX(" + translateX + "px)";
 //		var imgbox = $('.index-slider-imgbox')[0];
 //		var li =$('.index-slider-imgbox').children('li');
