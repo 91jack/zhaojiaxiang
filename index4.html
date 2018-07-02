@@ -41,7 +41,8 @@
 		.swiper-slide-prev,
 		.swiper-slide-next {
 			width: 1rem!important;
-			transform: scale(0.9);
+			transform: scale(0.9)!important;
+			-webkit-transform:scale(0.9)!important;
 		}
 	</style>
 </head>
@@ -207,23 +208,21 @@
 <script src="static/js/common.js"></script>
 <script src="static/js/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-		// 轮播调用
-//
-//		var imgbox = $('.index-slider-imgbox')[0];
-//		var li =$('.index-slider-imgbox').children('li');
-//		slider( imgbox, li)
+		// 轮播
  var mySwiper = new Swiper ('.swiper-container', {
+ 		autoplay:true,
     loop: true,
     slidesPerView: '3',
     loopedSlides: 3,
     centeredSlides : true,
     spaceBetween : 5,
-    // 如果需要前进后退按钮
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    
+    runCallbacksOnInit : false,//初始化时不触发slideChange
+	  on:{
+	    slideChangeTransitionStart:function(){
+	      $('.swiper-slide-prev').css('transform','scale(.8)');
+	      $('.swiper-slide-next').css('transform','scale(.8)');
+	    },
+	  },
 
   })        
 	
