@@ -42,10 +42,10 @@ function slider( imgbox, li){
 			setTranlateX(-340);
 		}else if(index == 2){
 			removeTransition();
-			setTranlateX(-693);
+			setTranlateX(-680);
 		}else if(index == 3){
 			removeTransition();
-			setTranlateX(-1045);
+			setTranlateX(-1020);
 		}
 		
 		
