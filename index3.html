@@ -10,7 +10,7 @@
 	<style type="text/css">
 		/*首页轮播*/
 	.index-slider {
-		width: 145.25rem;
+	/*	width: 145.25rem;*/
 	/*	transform: translateX(-28.75rem);*/
 	}
 
@@ -222,9 +222,12 @@
 <script src="static/js/jquery-3.1.1.min.js"></script>
 <script src="static/js/common.js"></script>
 <script type="text/javascript">
+	$(function(){
+		
 		// 轮播调用
 			var liFirst = $('.index-slider-imgbox li:first-child').clone();
 			var liLast = $('.index-slider-imgbox li:last-child').clone();
+		
 			var imgBox = $('.index-slider-imgbox');
 			console.log(liFirst)
 			// 将第一张追加在最后
@@ -232,7 +235,12 @@
 			// 将最后一张追加在最前
 			imgBox.prepend(liLast);
 			
+			
 			var w = document.documentElement.clientWidth;
+			
+			var liNum = $('.index-slider-imgbox li').length;
+			imgBox.css('width',liNum * w + 'px');
+		
 			var liWidth = $('.index-slider-imgbox li').width();
 			var mrWidth = $('.index-slider-imgbox li').css('margin-right');
 			var halfWidth = w - liWidth - parseFloat(mrWidth); 
@@ -247,6 +255,7 @@
 //		var imgbox = $('.index-slider-imgbox')[0];
 //		var li =$('.index-slider-imgbox').children('li');
 //		slider( imgbox, li)
+	})
 
 	
 	
