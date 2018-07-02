@@ -37,32 +37,32 @@ function slider( imgbox, li){
 	imgbox.addEventListener('transitionend', function() {
 		// 无缝滚动
 		console.log(index)
-		if(index == 1){
+//		if(index == 1){
+//			removeTransition();
+//			setTranlateX(-340);
+//		}else if(index == 2){
+//			removeTransition();
+//			setTranlateX(-680);
+//		}else if(index == 3){
+//			removeTransition();
+//			setTranlateX(-1020);
+//		}
+		
+		
+		if(index >= imgNum) {
+			// 瞬间定位到第一张
+			index = 0;
+			// 先清除过渡，然后在根据index定位
 			removeTransition();
-			setTranlateX(-340);
-		}else if(index == 2){
-			removeTransition();
-			setTranlateX(-680);
-		}else if(index == 3){
-			removeTransition();
-			setTranlateX(-1020);
+			setTranlateX(-index * width);
 		}
-		
-		
-//		if(index >= imgNum) {
-//			// 瞬间定位到第一张
-//			index = 0;
-//			// 先清除过渡，然后在根据index定位
-//			removeTransition();
-//			setTranlateX(-index * width);
-//		}
-//		// 无缝滑动（定时器、过渡、位移）
-//		else if(index < 0) {
-//			index = imgNum-1;
-//			//console.log(index)
-//			removeTransition();
-//			setTranlateX(-index * width);
-//		}
+		// 无缝滑动（定时器、过渡、位移）
+		else if(index < 0) {
+			index = imgNum-1;
+			//console.log(index)
+			removeTransition();
+			setTranlateX(-index * width);
+		}
 		//console.log(index)
 		//$(currentNum).text(index + 1)
 	
