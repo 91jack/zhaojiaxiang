@@ -6,34 +6,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
   <title>白马之乡</title>
   <link rel="stylesheet" type="text/css" href="static/css/common.css"/>
-  <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
 	<link rel="stylesheet" type="text/css" href="static/css/swiper-4.3.3.min.css"/>
-	<style type="text/css">
-		.swiper-container {
-			width: 100%;
-		/*	width: 28.75rem;*/
-			height: 14.375rem;
-			padding: 0.541666rem 0;
-			background:#f1f1f1 ;
-			overflow: hidden;
-			position: relative;
-		}
-		.swiper-slide {
-			/*width: 28.75rem;*/
-			height:14.583333rem;	
-			border-radius: 10px;
-			overflow: hidden;
-		}
-		.swiper-slide-active {
-			width: 28.75rem!important;
-		}
-		.swiper-slide-prev,
-		.swiper-slide-next {
-			width: 1rem!important;
-			transform: scale(0.9)!important;
-			-webkit-transform:scale(0.9)!important;
-		}
-	</style>
+  <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
 </head>
 <body class="index-page">
 	<!--首页顶部切换-->
@@ -57,10 +31,6 @@
         	<a href=""><img src="static/img/banner3.png"/></a>
         </div>
     </div>
-    
-    <!-- 如果需要导航按钮 -->
-    <!--<div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>-->
 </div>
 	
 	
@@ -201,9 +171,9 @@
  var mySwiper = new Swiper ('.swiper-container', {
  		//autoplay:true,
  		autoplay: {
-    delay: 5000,
-    stopOnLastSlide: false,
-    disableOnInteraction: true,
+	    delay: 5000,
+	    stopOnLastSlide: false,
+	    disableOnInteraction: true,
     },
     loop: true,
     speed: 1000,
