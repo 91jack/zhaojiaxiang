@@ -199,8 +199,14 @@
 <script type="text/javascript">
 		// 轮播
  var mySwiper = new Swiper ('.swiper-container', {
- 		autoplay:true,
+ 		//autoplay:true,
+ 		autoplay: {
+    delay: 5000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+    },
     loop: true,
+    speed: 1000,
     slidesPerView: '3',
     loopedSlides: 3,
     centeredSlides : true,
