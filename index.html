@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
   <title>白马之乡</title>
   <link rel="stylesheet" type="text/css" href="static/css/common.css"/>
-  <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
 	<link rel="stylesheet" type="text/css" href="static/css/swiper-4.3.3.min.css"/>
+<<<<<<< HEAD
 	<style type="text/css">
 		.swiper-container {
 			width: 100%;
@@ -38,6 +38,9 @@
 			-webkit-transform:scale(0.9)!important;
 		}
 	</style>
+=======
+  <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+>>>>>>> 8bb87b3cbedfdb4c98c344859dbb707b2fbb9f2b
 </head>
 <body class="index-page">
 	<!--首页顶部切换-->
@@ -61,10 +64,6 @@
         	<a href=""><img src="static/img/banner3.png"/></a>
         </div>
     </div>
-    
-    <!-- 如果需要导航按钮 -->
-    <!--<div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>-->
 </div>
 	
 	
@@ -203,8 +202,14 @@
 <script type="text/javascript">
 		// 轮播
  var mySwiper = new Swiper ('.swiper-container', {
- 		autoplay:true,
+ 		//autoplay:true,
+ 		autoplay: {
+	    delay: 5000,
+	    stopOnLastSlide: false,
+	    disableOnInteraction: true,
+    },
     loop: true,
+    speed: 1000,
     slidesPerView: '3',
     loopedSlides: 3,
     centeredSlides : true,
