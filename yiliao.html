@@ -191,6 +191,8 @@ $('.yuyue-day').each(function(){
 	$(this).on('click',function(){
 		var selectTime = $(this).attr('data-date'); // 将时间传到后台，返回当天医生列表
 		console.log(selectTime)
+		
+		$(this).addClass('today').siblings().removeClass('today')
 	})
 })
 
