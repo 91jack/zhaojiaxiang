@@ -7,6 +7,14 @@
   <title>地图搜索</title>
   <link rel="stylesheet" href="static/css/common.css">
   <link rel="stylesheet" href="static/css/app.css">
+  <style type="text/css">
+  	.select-wrap {
+  		height: 3.333333rem;
+  	}
+  	#map {
+  		height: 41.666666rem;
+  	}
+  </style>
 </head>
 <body class="">
 	<div class="mask"></div>
@@ -19,13 +27,148 @@
 		</div>
 	</div>
 	
+	<div class="select-wrap">
+		<a href="javascript:;" data-selectval='0'>全部</a>
+	</div>
 	
+		<div id="map"></div>
 	
 	
 <script src="static/js/jquery-3.1.1.min.js"></script>
 <script src="static/js/common.js"></script>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=wqB7npvF7DsDGlFG2oYhih93K5iEqsou"></script>
 <script type="text/javascript">
+// 地图初始化
+var map = new BMap.Map("map"); // 创建Map实例
+var point = new BMap.Point(107.562695,29.271674);//赵家乡政府
+map.centerAndZoom(point, 15); // 初始化地图,设置中心点坐标和地图级别
 
+map.enableScrollWheelZoom(true); // 缩放地图
+
+
+//获取两点距离，保留小数点后两位
+//var pointA = new BMap.Point(106.486654,29.490295);  // 创建点坐标A--大渡口区
+//var pointB = new BMap.Point(106.581515,29.615467);  // 创建点坐标B--江北区
+//alert('从大渡口区到江北区的距离是：'+(map.getDistance(pointA,pointB)).toFixed(2)+' 米。');  //获取两点距离,保留小数点后两位
+//var polyline = new BMap.Polyline([pointA,pointB], {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});  //定义折线
+//map.addOverlay(polyline);     //添加折线到地图上
+
+//添加控件和比例尺
+var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL}); //右上角
+map.addControl(top_right_navigation);    
+
+// 设置点的新图标
+var myIcon = new BMap.Icon("static/mapicon/zhengfu1.png", new BMap.Size(50,50));
+var marker2 = new BMap.Marker(point,{icon:myIcon});  // 创建标注
+map.addOverlay(marker2); 
+
+// 添加多个点
+function addMarker(point){
+	  var marker = new BMap.Marker(point,{icon:jingquIcon});
+	  map.addOverlay(marker);
+	}
+
+	// 随机向地图添加25个标注
+	var jingquIcon = new BMap.Icon("static/mapicon/jingqu.png", new BMap.Size(50,50));
+	var bounds = map.getBounds();
+	var sw = bounds.getSouthWest();
+	var ne = bounds.getNorthEast();
+	var lngSpan = Math.abs(sw.lng - ne.lng);
+	var latSpan = Math.abs(ne.lat - sw.lat);
+	for (var i = 0; i < 25; i ++) {
+		var point = new BMap.Point(sw.lng + lngSpan * (Math.random() * 0.7), ne.lat - latSpan * (Math.random() * 0.7));
+		addMarker(point);
+	}
+
+//var arr =[];
+//// 当前定位
+//var geolocation = new BMap.Geolocation();
+//geolocation.getCurrentPosition(function(r) {
+//	if(this.getStatus() == BMAP_STATUS_SUCCESS) {
+//		var geoc = new BMap.Geocoder();
+//			geoc.getLocation(r.point, function(rs) {
+//				console.log(r.point)
+//				var addComp = rs.addressComponents;
+//				var address = addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+//				console.log(address);
+//				
+//				localStorage.setItem('addr',address);
+//				localStorage.setItem('address_xy',JSON.stringify(r.point))
+//			})
+//		position(r);
+//		deletePoint();
+//	} else {
+//		alert('failed' + this.getStatus());
+//	}
+//});
+//
+//
+//function showInfo(e) {
+//	position(e);
+//	deletePoint();
+//}
+//map.addEventListener("click", showInfo);
+//
+//var geolocation = new BMap.Geolocation();
+//geolocation.getCurrentPosition(function(r) {
+//	if(this.getStatus() == BMAP_STATUS_SUCCESS) {
+//		var geoc = new BMap.Geocoder();
+//		geoc.getLocation(r.point, function(rs) {
+//			console.log(r.point)
+//			var addComp = rs.addressComponents;
+//			var address = addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+//			console.log(address);
+//			$('.icon').click(function(e){
+//				var mk = new BMap.Marker(e.point);
+//				mk.point= new BMap.Point(r.point.lng, r.point.lat)
+//				arr.push(mk);
+//				map.addOverlay(mk);
+//				map.panTo(mk.point);
+//				// 逆地址解析
+//				var geoc = new BMap.Geocoder();
+//				geoc.getLocation(mk.point, function(rs) {
+//					var addComp = rs.addressComponents;
+//					var address = addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+//					addr.innerHTML = address;
+//				})
+//				p = mk.point;
+//				console.log(p);
+//				deletePoint();
+//			})
+//		})
+//	} else {
+//		alert('failed' + this.getStatus());
+//	}
+//});
+//
+//function position(e) {
+//	var mk = new BMap.Marker(e.point);
+//	arr.push(mk);
+//	map.addOverlay(mk);
+//	map.panTo(e.point);
+//	// 逆地址解析
+//	var geoc = new BMap.Geocoder();
+//	geoc.getLocation(e.point, function(rs) {
+//		var addComp = rs.addressComponents;
+//		var address = addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+//		//addr.innerHTML = address;
+//	})
+//	p = e.point;
+//	console.log(p);
+//	$('.BMap_geolocationIcon').on('click',function(){
+//		console.log(1111111111)
+//	})
+//	// 存json
+//	
+//	localStorage.setItem('address_xy',JSON.stringify(e.point))
+//}
+//function deletePoint(){
+//	var allOverlay = map.getOverlays();
+//	for (var i = 0; i < arr.length-1; i++){
+//		map.removeOverlay(allOverlay[i+1]);
+//		return false;
+//	}
+//}
 	
 </script>
 </body>
