@@ -330,8 +330,8 @@
 /*统战馆 tzg.html
  -------------------------*/
 .tzgwrap {
-	font-size: 1.2rem;
-	line-height: 1.5rem;
+	font-size: 0.75rem;
+	line-height: 2rem;
 	color: #666;
 	background: #fff;
 }
@@ -357,7 +357,6 @@
 	height: 3.333333rem;
 	line-height: 3.333333rem;
 	padding: 0 1rem;
-	/*background: red;*/
 }
 .yiliao-into-footer img {
 	margin-top: 1rem;
